@@ -1,0 +1,2 @@
+(function($){'use strict';$(document).ready(function(){$("#edddfe_gen_coupon_form").submit(function(e){e.preventDefault();var purc_code=$("#edddfe_purchase_key").val();console.log(purc_code)
+$.ajax({type:"POST",url:edddfe_object.ajax_url,data:{action:'edddfe_coupon_generate',purchase_code:purc_code},success:function(res){$(".edddfe-response").html(res)}});return false;});});})(jQuery);

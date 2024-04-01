@@ -1,0 +1,22 @@
+.woocommerce .woocommerce-Reviews .comment-column .customer-comments .replay-form .comment-respond .comment-reply-title {
+  margin-bottom: 10px;
+}
+.woocommerce .woocommerce-Reviews .comment-column .customer-comments .replay-form .comment-respond .comment-form .comment-notes {
+  font-weight: 600;
+  color: #93959e;
+}
+.woocommerce .woocommerce-Reviews .comment-column .customer-comments .replay-form .comment-respond .comment-form .comment-form-rating {
+  display: flex;
+  margin-bottom: 5px;
+}
+.woocommerce .woocommerce-Reviews .comment-column .customer-comments .replay-form .comment-respond .comment-form .comment-form-rating label[for=rating] {
+  margin-bottom: 0 !important;
+  font-weight: 600;
+}
+.woocommerce .woocommerce-Reviews .comment-column .customer-comments .replay-form .comment-respond .comment-form .comment-form-rating .stars {
+  margin-bottom: 0 !important;
+  margin-left: 15px !important;
+}
+.woocommerce .woocommerce-Reviews .comment-column .customer-comments .replay-form .comment-respond .comment-form .comment-form-comment label[for=comment] {
+  font-weight: 600;
+}
