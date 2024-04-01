@@ -1,0 +1,1286 @@
+@media (max-width:375px) {
+     /* navbar start  */
+
+     .navbar {
+        padding: 35px 0px;
+    }
+
+    /* navbar end */
+
+    /* header start  */
+
+    header .container .header-top .left ul {
+        gap: 15px;
+    }
+
+    header .container .header-top .right {
+        display: none !important;
+    }
+
+    .navbar .container .search-bar {
+        display: none !important;
+    }
+
+    .navbar .container .icon {
+        display: none !important;
+    }
+
+    .header-2 {
+        display: none;
+    }
+
+
+    /* header end */
+
+    /* new released section start  */
+
+    .new-released {
+        padding-top: 30px;
+    }
+
+    .new-released .container .blog-2 {
+        padding-top: 30px;
+    }
+
+    .new-released .container .blog-2 .image-1, .new-released .container .blog-2 .image-2 {
+        justify-content: center !important;
+    }
+
+    .new-released .container .blog-2 .image-1 img, .new-released .container .blog-2 .image-2 img {
+        width: 100%;
+    }
+
+    /* new released section end */
+
+    /* shiping section start  */
+
+    .shipping-section .container .blog {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    /* shiping section end */
+
+    /* gamer section start  */
+
+    .gamer-world .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .gamer-world .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    /* gamer section end */
+
+    /* counter section start  */
+
+    .counter-section .container .row {
+        gap: 40px;
+    }
+
+    .counter-section .container .blog-2 .details .mobile img {
+        width: 100%;
+    }
+
+    .counter-section .container .blog-2 .details .add .image-1 img, .counter-section .container .blog-2 .details .add .image-2 img {
+        width: 110px;
+    }
+
+    /* counter section end */
+
+    /* product section start  */
+
+    .product-section .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product-section .container .card-group .box {
+        padding: 0px !important;
+    }
+
+    .product-section .container .card-group .box .items .content .button {
+        width: 100%;
+    }
+
+    .product-section .container .card-group .box .items {
+        display: block !important;
+    }
+
+    .product-section .container .card-group .box .items .image {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* product section end */
+
+    /* best saller section start  */
+
+    .best-saller .container .row .blog-1 {
+        padding-bottom: 30px;
+    }
+
+    /* best saller section end */
+
+    /* popular section start  */
+
+    .popular-sales .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    .popular-sales .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    /* popular section end */
+
+    /* new arrivals section start  */
+
+    .arrivals-section .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .arrivals-section .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    /* new arrivals section end */
+
+    /* discount section start  */
+
+    .discount-section .container .content .details form .button {
+        width: 100%;
+    }
+
+    /* discount section end */
+
+    /* footer start  */
+
+    footer .container .foot-content {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    footer .container .foot-bottom {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    footer .container .foot-bottom .left {
+        justify-content: space-between !important;
+    }
+
+    footer .container .foot-bottom .right {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* footer end */ 
+}
+
+@media (max-width:393px) {
+      /* navbar start  */
+
+      .navbar {
+        padding: 35px 0px;
+    }
+
+    /* navbar end */
+
+    /* header start  */
+
+    header .container .header-top .left ul {
+        gap: 15px;
+    }
+
+    header .container .header-top .right {
+        display: none !important;
+    }
+
+    .navbar .container .search-bar {
+        display: none !important;
+    }
+
+    .navbar .container .icon {
+        display: none !important;
+    }
+
+    .header-2 {
+        display: none;
+    }
+
+
+    /* header end */
+
+    /* new released section start  */
+
+    .new-released {
+        padding-top: 30px;
+    }
+
+    .new-released .container .blog-2 {
+        padding-top: 30px;
+    }
+
+    .new-released .container .blog-2 .image-1, .new-released .container .blog-2 .image-2 {
+        justify-content: center !important;
+    }
+
+    .new-released .container .blog-2 .image-1 img, .new-released .container .blog-2 .image-2 img {
+        width: 100%;
+    }
+
+    /* new released section end */
+
+    /* shiping section start  */
+
+    .shipping-section .container .blog {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    /* shiping section end */
+
+    /* gamer section start  */
+
+    .gamer-world .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .gamer-world .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    /* gamer section end */
+
+    /* counter section start  */
+
+    .counter-section .container .row {
+        gap: 40px;
+    }
+
+    .counter-section .container .blog-2 .details .mobile img {
+        width: 100%;
+    }
+
+    .counter-section .container .blog-2 .details .add .image-1 img, .counter-section .container .blog-2 .details .add .image-2 img {
+        width: 110px;
+    }
+
+    /* counter section end */
+
+    /* product section start  */
+
+    .product-section .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product-section .container .card-group .box {
+        padding: 0px !important;
+    }
+
+    .product-section .container .card-group .box .items .content .button {
+        width: 100%;
+    }
+
+    .product-section .container .card-group .box .items {
+        display: block !important;
+    }
+
+    .product-section .container .card-group .box .items .image {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* product section end */
+
+    /* best saller section start  */
+
+    .best-saller .container .row .blog-1 {
+        padding-bottom: 30px;
+    }
+
+    /* best saller section end */
+
+    /* popular section start  */
+
+    .popular-sales .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    .popular-sales .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    /* popular section end */
+
+    /* new arrivals section start  */
+
+    .arrivals-section .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .arrivals-section .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    /* new arrivals section end */
+
+    /* discount section start  */
+
+    .discount-section .container .content .details form .button {
+        width: 100%;
+    }
+
+    /* discount section end */
+
+    /* footer start  */
+
+    footer .container .foot-content {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    footer .container .foot-bottom {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    footer .container .foot-bottom .left {
+        justify-content: space-between !important;
+    }
+
+    footer .container .foot-bottom .right {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* footer end */ 
+}
+
+@media (max-width:414px) {
+     /* navbar start  */
+
+     .navbar {
+        padding: 35px 0px;
+    }
+
+    /* navbar end */
+
+    /* header start  */
+
+    header .container .header-top .left ul {
+        gap: 15px;
+    }
+
+    header .container .header-top .right {
+        display: none !important;
+    }
+
+    .navbar .container .search-bar {
+        display: none !important;
+    }
+
+    .navbar .container .icon {
+        display: none !important;
+    }
+
+    .header-2 {
+        display: none;
+    }
+
+
+    /* header end */
+
+    /* new released section start  */
+
+    .new-released {
+        padding-top: 30px;
+    }
+
+    .new-released .container .blog-2 {
+        padding-top: 30px;
+    }
+
+    .new-released .container .blog-2 .image-1, .new-released .container .blog-2 .image-2 {
+        justify-content: center !important;
+    }
+
+    .new-released .container .blog-2 .image-1 img, .new-released .container .blog-2 .image-2 img {
+        width: 100%;
+    }
+
+    /* new released section end */
+
+    /* shiping section start  */
+
+    .shipping-section .container .blog {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    /* shiping section end */
+
+    /* gamer section start  */
+
+    .gamer-world .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .gamer-world .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    /* gamer section end */
+
+    /* counter section start  */
+
+    .counter-section .container .row {
+        gap: 40px;
+    }
+
+    .counter-section .container .blog-2 .details .mobile img {
+        width: 100%;
+    }
+
+    .counter-section .container .blog-2 .details .add .image-1 img, .counter-section .container .blog-2 .details .add .image-2 img {
+        width: 110px;
+    }
+
+    /* counter section end */
+
+    /* product section start  */
+
+    .product-section .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product-section .container .card-group .box {
+        padding: 0px !important;
+    }
+
+    .product-section .container .card-group .box .items .content .button {
+        width: 100%;
+    }
+
+    .product-section .container .card-group .box .items {
+        display: block !important;
+    }
+
+    .product-section .container .card-group .box .items .image {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* product section end */
+
+    /* best saller section start  */
+
+    .best-saller .container .row .blog-1 {
+        padding-bottom: 30px;
+    }
+
+    /* best saller section end */
+
+    /* popular section start  */
+
+    .popular-sales .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    .popular-sales .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    /* popular section end */
+
+    /* new arrivals section start  */
+
+    .arrivals-section .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .arrivals-section .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    /* new arrivals section end */
+
+    /* discount section start  */
+
+    .discount-section .container .content .details form .button {
+        width: 100%;
+    }
+
+    /* discount section end */
+
+    /* footer start  */
+
+    footer .container .foot-content {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    footer .container .foot-bottom {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    footer .container .foot-bottom .left {
+        justify-content: space-between !important;
+    }
+
+    footer .container .foot-bottom .right {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* footer end */ 
+}
+
+@media (max-width:575px) {
+
+    /* navbar start  */
+
+    .navbar {
+        padding: 35px 0px;
+    }
+
+    /* navbar end */
+
+    /* header start  */
+
+    header .container .header-top .left ul {
+        gap: 15px;
+    }
+
+    header .container .header-top .right {
+        display: none !important;
+    }
+
+    .navbar .container .search-bar {
+        display: none !important;
+    }
+
+    .header-2 {
+        display: none;
+    }
+
+
+    /* header end */
+
+    /* new released section start  */
+
+    .new-released {
+        padding-top: 30px;
+    }
+
+    .new-released .container .blog-2 {
+        padding-top: 30px;
+    }
+
+    .new-released .container .blog-2 .image-1, .new-released .container .blog-2 .image-2 {
+        justify-content: center !important;
+    }
+
+    /* new released section end */
+
+    /* shiping section start  */
+
+    .shipping-section .container .blog {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    /* shiping section end */
+
+    /* gamer section start  */
+
+    .gamer-world .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .gamer-world .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    /* gamer section end */
+
+    /* counter section start  */
+
+    .counter-section .container .row {
+        gap: 40px;
+    }
+
+    /* counter section end */
+
+    /* product section start  */
+
+    .product-section .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product-section .container .card-group .box {
+        padding: 0px !important;
+    }
+
+    .product-section .container .card-group .box .items .content .button {
+        width: 100%;
+    }
+
+    /* product section end */
+
+    /* best saller section start  */
+
+    .best-saller .container .row .blog-1 {
+        padding-bottom: 30px;
+    }
+
+    /* best saller section end */
+
+    /* popular section start  */
+
+    .popular-sales .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    .popular-sales .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    /* popular section end */
+
+    /* new arrivals section start  */
+
+    .arrivals-section .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .arrivals-section .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    /* new arrivals section end */
+
+    /* discount section start  */
+
+    .discount-section .container .content .details form .button {
+        width: 100%;
+    }
+
+    /* discount section end */
+
+    /* footer start  */
+
+    footer .container .foot-content {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    footer .container .foot-bottom {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    footer .container .foot-bottom .left {
+        justify-content: space-between !important;
+    }
+
+    footer .container .foot-bottom .right {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* footer end */
+
+}
+
+@media (min-width:576px) {
+     /* navbar start  */
+
+     .navbar {
+        padding: 35px 0px;
+    }
+
+    /* navbar end */
+
+    /* header start  */
+
+    header .container .header-top .left ul {
+        gap: 15px;
+    }
+
+    header .container .header-top .right {
+        display: flex !important;
+    }
+
+    .navbar .container .search-bar {
+        display: none !important;
+    }
+
+    .header-2 {
+        display: none;
+    }
+
+
+    /* header end */
+
+    /* new released section start  */
+
+    .new-released {
+        padding-top: 0px;
+    }
+
+    .new-released .container .blog-2 {
+        padding-top: 30px;
+    }
+
+    .new-released .container .blog-2 .image-1, .new-released .container .blog-2 .image-2 {
+        justify-content: center !important;
+    }
+
+    /* new released section end */
+
+    /* shiping section start  */
+
+    .shipping-section .container .blog {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    /* shiping section end */
+
+    /* gamer section start  */
+
+    .gamer-world .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .gamer-world .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    /* gamer section end */
+
+    /* counter section start  */
+
+    .counter-section .container .row {
+        gap: 40px;
+    }
+
+    .counter-section .container .blog-2 .details .mobile img {
+        width: 100%;
+    }
+
+    /* counter section end */
+
+    /* product section start  */
+
+    .product-section .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product-section .container .card-group .box {
+        padding: 0px !important;
+    }
+
+    .product-section .container .card-group .box .items .content .button {
+        width: 100%;
+    }
+
+    /* product section end */
+
+    /* best saller section start  */
+
+    .best-saller .container .row .blog-1 {
+        padding-bottom: 30px;
+    }
+
+    /* best saller section end */
+
+    /* popular section start  */
+
+    .popular-sales .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    .popular-sales .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    /* popular section end */
+
+    /* saller section start  */
+
+    .best-saller .container .row .deta {
+        padding-bottom: 25px;
+    }
+
+    /* saller section end */
+
+    /* new arrivals section start  */
+
+    .arrivals-section .container .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .arrivals-section .container .card-group .box {
+        margin: 0px auto;
+    }
+
+    /* new arrivals section end */
+
+    /* discount section start  */
+
+    .discount-section .container .content .details form .button {
+        width: 100%;
+    }
+
+    /* discount section end */
+
+    /* footer start  */
+
+    footer .container .foot-content {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    footer .container .foot-bottom {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    footer .container .foot-bottom .left {
+        justify-content: space-between !important;
+    }
+
+    footer .container .foot-bottom .right {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* footer end */
+}
+
+@media (min-width:768px) {
+    /* new released section start  */
+
+    .new-released .container .blog-2 {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .new-released .container .blog-2 .image-1, .new-released .container .blog-2 .image-2 {
+        justify-content: center !important;
+    }
+
+    .new-released .container .blog-2 .image-1 {
+        padding-right: 12px;
+    }
+
+    .new-released .container .blog-2 .image-2  {
+        padding-left: 12px;
+    }
+
+    .new-released .container .blog-2 .image-1 img, .new-released .container .blog-2 .image-2 img {
+        width: 100%;
+    }
+
+    .new-released .container .blog-2 .image-2 {
+        margin-top: 0px;
+    }
+
+    /* new released section end */
+
+    /* shiping section start  */
+
+    .shipping-section .container .blog {
+        gap: 0px ;
+    }
+
+    .shipping-section .container .blog .i-1 {
+        padding-bottom: 40px;
+    }
+
+    /* shiping section end */
+
+    /* gamer world section start  */
+
+    .gamer-world .container .card-group .box {
+        margin: 0px !important;
+    }
+
+    /* gamer world section end */
+
+    /* product section start  */
+
+    .product-section .container .card-group .box .items {
+        align-items: center;
+        display: block !important;
+    }
+
+    .product-section .container .card-group .box .items .image img {
+        width: 100px;
+    }
+
+    .product-section .container .card-group .box .items .image {
+        padding: 20px 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-section .container .card-group .box .items .content {
+        padding: 12px 30px;
+    }
+
+    .product-section .container .card-group .box .items .content ul {
+        justify-content: center;
+    }
+
+    .product-section .container .card-group .box .items .content h3 {
+        justify-content: center;
+    }
+
+    .product-section .container .card-group .box {
+        padding: 10px 15px !important;
+    }
+
+    /* product section end */
+ 
+    /* discount section start  */
+
+    .discount-section .container .content .details form .button {
+        width: 39% !important;
+    }
+
+    .discount-section .container .content .details form {
+        justify-content: space-between;
+    }
+
+    .discount-section .container .content .details form input {
+        padding: 0px !important;
+    }
+
+    .discount-section .container .content .details form span {
+        padding-left: 25px !important;
+    }
+
+    /* discount section end */
+
+    /* footer start  */
+
+    footer .container .foot-content {
+        gap: 0px;
+    }
+
+    footer .container .foot-content .box {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* footer end */
+
+}
+
+@media (min-width:992px) {
+
+    /* navbar start  */
+
+    .navbar .container .search-bar {
+        display: flex !important;
+    }
+
+    .navbar .container {
+        gap: 13px;
+    }
+
+    /* navbar end */
+
+    /* shipping section start  */
+
+    .shipping-section .container .blog {
+        justify-content: center;
+        padding-top: 40px;
+    }
+
+    .shipping-section .container .blog .item-1 {
+        padding-bottom: 30px;
+    }
+
+    /* shipping section end */
+
+    /* gamer world section start  */
+
+    .gamer-world .container .card-group {
+        gap: 18px;
+        justify-content: center !important;
+    }
+
+    /* gamer world section end */
+
+    /* counter section start  */
+
+    .counter-section .container .row {
+        gap: 0px;
+    }
+
+    .counter-section .container .blog .details {
+        background-position: top;
+    }
+
+    .new, .old, .current {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    /* counter section end */
+
+    /* product section start  */
+
+    .product-section .container .card-group .box .items {
+        align-items: center;
+        display: flex !important;
+    }
+
+    .product-section .container .card-group .box .items .content ul {
+        justify-content: start;
+    }
+
+    .product-section .container .card-group .box .items .content h3 {
+        justify-content: start;
+    }
+
+    .product-section .container .card-group .box {
+        padding: 10px 15px !important;
+    }
+
+    .product-section .container .card-group .box .items .content {
+        padding: 12px 30px 12px 0px;
+    }
+
+    /* product section end */
+
+    /* popular sales section start  */
+
+    .popular-sales .container .card-group {
+        gap: 18px;
+    }
+
+    /* popular sales section end */
+
+    /* arrivals section start  */
+
+    .arrivals-section .container .card-group {
+        gap: 18px;
+    }
+
+    /* arrivals section end  */
+
+    /* discount section start  */
+
+    .discount-section .container .content .details form .button {
+        width: 40% !important;
+    }
+
+    /* discount section end */
+
+    /* footer start  */
+
+    footer .container .foot-bottom {
+        gap: 30px;
+    }
+
+    /* footer end */
+
+}
+
+@media (min-width:1200px) {
+
+    /* header start  */
+
+    header {
+        display: flex;
+    }
+
+    .header-2 {
+        display: flex;
+    }
+
+    .header-2 .container .row .menu ul {
+        gap: 40px;
+    }
+
+    /* header end */
+
+    /* new released section start  */
+
+    .new-released {
+        padding: 60px 0px;
+    }
+
+    .new-released .container .blog-2 {
+        display: block !important;
+    }
+
+    .new-released .container .blog-2 .image-1 {
+        padding: 0px;
+        padding-bottom: 12px;
+    }
+
+    .new-released .container .blog-2 .image-2 {
+        padding: 0px;
+        padding-top: 12px;
+    }
+
+    .new-released .container .blog-2 {
+        padding-top: 0px;
+    }
+
+    /* new released section end */
+
+    /* gamer section start  */
+
+    .gamer-world .container .card-group {
+        gap: 0px;
+        justify-content: space-between !important;
+    }
+
+    .gamer-world .container .card-group .box {
+        width: 260px;
+    }
+
+    /* gamer section end */
+
+    /* popular sales section start  */
+
+    .popular-sales .container .card-group {
+        gap: 0px;
+    }
+
+    .popular-sales .container .card-group .box {
+        width: 260px;
+    }
+
+    /* popular sales section end */
+
+    /* arrivals section start  */
+
+    .arrivals-section .container .card-group {
+        gap: 25px;
+    }
+
+    .arrivals-section .container .card-group .box {
+        width: 260px;;
+    }
+
+    /* arrivals section end */
+
+    /* pupular sales section start  */
+
+    .popular-sales .container .card-blog .card-box .content h3 {
+        font-size: 13px;
+    }
+
+    /* pupular sales section end */
+
+}
+
+@media (min-width:1400px) {
+
+    /* header start  */
+
+    .header-2 .container .row .menu ul {
+        gap: 0;
+    }
+
+    /* header end */
+
+     /* gamer section start  */
+    .gamer-world .container .card-group .box {
+        width: 300px;
+    }
+
+    /* gamer section end */
+
+    /* product section start  */
+
+    .product-section .container .card-group .box .items .image img {
+        width: 254px;
+    }
+
+    /* product section end */
+
+    /* popular sales section start  */
+
+    .popular-sales .container .card-group .box {
+        width: 300px;
+    }
+
+    /* popular sales section end */
+
+    /* arrivals section start  */
+
+    .arrivals-section .container .card-group .box {
+        width: 300px;;
+    }
+
+    /* arrivals section end */
+
+    /* pupular sales section start  */
+
+    .popular-sales .container .card-blog .card-box .content h3 {
+        font-size: 15px;
+    }
+
+    /* pupular sales section end */
+
+    /* discount section start */
+
+    .discount-section .container .content .details form input {
+        padding-left: 25px !important;
+    }
+
+    .product-section .container .card-group .box .items .content .button {
+        width: 60%;
+    }
+    
+    /* discount section end */
+
+
+}

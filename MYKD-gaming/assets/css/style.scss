@@ -1,0 +1,820 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0px auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+$font-family: 'Barlow';
+$font-family-2: 'Luckiest Guy';
+$primary-color: #45f882;
+$secondry-color: white;
+$transition: all 0.5s;
+
+// home section start 
+
+.home_section {
+    background-image: url(../image/banner_bg.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    height: 100vh;
+
+    .container {
+        header {
+            padding: 20px 0px;
+            // position: absolute;
+            // width: 100%;
+            // left: 0px;
+
+            .head {
+                // background-color: #000000ad;
+                padding: 20px 18px;
+
+                .container {
+                    .row {
+                        .logo {
+                            img {
+                                width: 177px;
+                            }
+                        }
+
+                        .menu {
+                            ul {
+                                position: relative;
+
+                                li:first-child a {
+                                    color: $primary-color;
+                                    &::after {
+                                        transform: rotate(-45deg);
+                                        visibility: visible;
+                                        top: 10px;
+                                        opacity: 1;
+                                    }
+                                }
+
+                                .drop-down {
+                                    position: absolute;
+                                    top: 72px;
+                                    background-color: #000000ad;
+                                    padding: 15px 12px;
+                                    min-width: 250px;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    transition: $transition;
+
+                                    ul {
+                                        li {
+                                            padding: 12px 18px;
+
+                                            a {
+                                                color: $secondry-color;
+                                                transition: $transition;
+                                                position: relative;
+
+                                                &:before {
+                                                    position: absolute;
+                                                    content: '';
+                                                    box-sizing: border-box;
+                                                    left: -20px;
+                                                    top: 30%;
+                                                    width: 8px;
+                                                    height: 5px;
+                                                    background-color: $primary-color;
+                                                    visibility: hidden;
+                                                    transition: 0.1s;
+                                                    border-radius: 0px 3px 3px 0px;
+
+                                                }
+
+                                                &:after {
+                                                    display: none;
+                                                }
+
+                                                &:hover {
+                                                    color: $primary-color;
+                                                    margin-left: 8px;
+
+                                                    &:before {
+                                                        visibility: visible;
+                                                        transition: 0.3s;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                li {
+                                    padding: 0px 20px;
+
+                                    a {
+                                        font-size: 15px;
+                                        color: $secondry-color;
+                                        text-transform: uppercase;
+                                        font-weight: bold;
+                                        font-family: $font-family;
+                                        position: relative;
+                                        transition: $transition;
+
+                                        &:after {
+                                            position: absolute;
+                                            content: '';
+                                            box-sizing: border-box;
+                                            left: 0px;
+                                            right: 0px;
+                                            width: 45px;
+                                            height: 1px;
+                                            top: 50%;
+                                            background-color: $primary-color;
+                                            visibility: hidden;
+                                            opacity: 0;
+                                            transition: $transition;
+                                        }
+                                    }
+
+                                    .about {
+                                        &:after {
+                                            left: 13px;
+                                        }
+                                    }
+
+                                    .tournament {
+                                        &:after {
+                                            left: 30px;
+                                        }
+                                    }
+
+                                    .contact {
+                                        &:after {
+                                            left: 10px;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        .drop-down {
+                                            visibility: visible;
+                                            top: 52px;
+                                            opacity: 1;
+                                            transition: $transition;
+                                        }
+
+                                        a {
+                                            color: $primary-color;
+                                            transition: $transition;
+                                        }
+
+                                        a {
+                                            &:after {
+                                                transform: rotate(-45deg);
+                                                transition: $transition;
+                                                visibility: visible;
+                                                opacity: 1;
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+                        .search-btn {
+                            .icon {
+                                a {
+                                    color: $secondry-color;
+                                    font-size: 22px;
+                                    transition: $transition;
+
+                                    &:hover {
+                                        color: $primary-color;
+                                        transition: $transition;
+                                    }
+                                }
+                            }
+
+                            .btn {
+                                a {
+                                    position: relative;
+                                    width: 150px;
+                                    height: 45px;
+                                    color: $primary-color;
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    letter-spacing: 1px;
+                                    display: block;
+                                    transition: $transition;
+
+                                    .svg-icon {
+                                        position: absolute;
+                                        stroke-width: 2px;
+                                        fill-rule: evenodd;
+                                        // z-index: -1;
+                                        left: 0;
+                                        top: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        fill: #0f1d29;
+                                        stroke: #00ff57;
+                                        transition: $transition;
+                                    }
+
+                                    .sign {
+                                        position: absolute;
+                                        top: 33%;
+                                        left: 20%;
+                                    }
+
+                                    span {
+                                        display: inline-block;
+                                        z-index: 1;
+                                        position: absolute;
+                                        top: 28%;
+                                        left: 40%;
+                                        font-size: 15px;
+                                        text-transform: uppercase;
+                                        font-family: $font-family;
+                                    }
+                                }
+                            }
+
+                            .toggle {
+                                a {
+                                    color: $secondry-color;
+                                    font-size: 25px;
+                                    transition: $transition;
+
+                                    &:hover {
+                                        color: $primary-color;
+                                        transition: $transition;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content {
+            padding: 150px 0px;
+
+            .details {
+
+                // padding: 100px 0px;
+                h2 {
+                    font-size: 150px;
+                    font-family: $font-family-2;
+                    color: $secondry-color;
+                    letter-spacing: 5px;
+                    font-weight: 100;
+                    text-shadow: 0px 6px 0px $primary-color;
+                }
+
+                h3 {
+                    font-size: 26px;
+                    text-align: center;
+                    font-family: $font-family;
+                    color: $secondry-color;
+                    letter-spacing: 6px;
+                }
+
+                a {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    margin: 40px 0px 0px;
+                }
+
+                svg {
+                    width: 184px;
+                    height: auto;
+                    fill: #00ff57;
+                    stroke: #ffffff;
+                   
+                }
+                .span {
+                    position: absolute;
+                    top: 27%;
+                    font-size: 20px;
+                    color: #0f1d29;
+                    font-weight: 700;
+                    font-family: $font-family;
+                }
+            }
+        }
+    }
+}
+
+// home section end
+
+// experience section start 
+
+.experience_section {
+    background-image: url(../image/result_bg.png);
+    background-repeat: no-repeat;
+    min-height: 500px;
+    margin-top: -140px;
+    padding: 150px 0px 25px;
+
+    .container {
+        .row {
+            .blog-1 {
+                justify-content: center;
+                padding: 12px 0px 25px 0px;
+
+                .title {
+                    span {
+                        font-size: 14px;
+                        color: $primary-color;
+                        font-family: $font-family;
+                        display: block;
+                        text-align: center;
+                        font-weight: 600;
+                    }
+
+                    h2 {
+                        font-size: 45px;
+                        color: $secondry-color;
+                        font-family: $font-family;
+                        padding: 15px 0px;
+                        font-weight: 600;
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            box-sizing: border-box;
+                            background-image: url(../image/title_shape.svg);
+                            background-repeat: no-repeat;
+                            bottom: -5px;
+                            left: 50%;
+                            transform: translate(-50%);
+                            width: 70px;
+                            height: 5px;
+                        }
+                    }
+                }
+            }
+
+            .blog-2 {
+                justify-content: center;
+                padding: 12px 0px 50px 0px;
+
+                .league {
+                    span {
+                        font-size: 24px;
+                        display: block;
+                        font-weight: 700;
+                        font-family: $font-family;
+                        color: $primary-color;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+
+            .blog-3 {
+                padding: 40px 0px;
+                .team-1 {
+                    justify-content: end;
+                    .name {
+                        padding-right: 25px;
+                        h2 {
+                            font-size: 24px;
+                            color: $secondry-color;
+                            text-transform: uppercase;
+                            font-family: $font-family;
+                            padding-bottom: 10px;
+                        }
+
+                        h3 {
+                            font-size: 18px;
+                            color: $primary-color;
+                            text-transform: uppercase;
+                            text-align: end;
+                        }
+                    }
+                    .content {
+                        .image {
+                            width: 112px;
+                            height: 112px;
+                            border: 3px solid $primary-color;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: black;
+                            z-index: 2;
+                            img {
+                                width: 70px;
+                            }
+                        }
+                        .svg {
+                            position: relative;
+                            left: -20px;
+                            z-index: 1;
+
+                            svg {
+                                width: 135px;
+                                fill: $primary-color;
+                            }
+                        
+                            .span {
+                                color: #20202a;
+                                font-size: 30px;
+                                font-family: $font-family;
+                                font-weight: bolder;
+                                text-transform: uppercase;
+
+                                position: absolute;
+                                left: 32%;
+                                top: 25%;
+
+                            }
+                        }
+                    }
+                }
+
+                .team-2 {
+                    justify-content: start;
+                    .name {
+                        padding-left: 25px;
+                        h2 {
+                            font-size: 24px;
+                            color: $secondry-color;
+                            text-transform: uppercase;
+                            font-family: $font-family;
+                            padding-bottom: 10px;
+                        }
+
+                        h3 {
+                            font-size: 18px;
+                            color: $primary-color;
+                            text-transform: uppercase;
+                            text-align: end;
+                        }
+                    }
+                    .content {
+                        .image {
+                            width: 112px;
+                            height: 112px;
+                            border: 3px solid $primary-color;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: black;
+                            z-index: 2;
+                            img {
+                                width: 70px;
+                            }
+                        }
+                        .svg {
+                            position: relative;
+                            right : -20px;
+                            z-index: 1;
+                            transform: rotateY(191deg);
+                            svg {
+                                width: 135px;
+                                fill: $primary-color;
+                            }
+                        
+                            .span {
+                                transform: rotateY(191deg);
+                                color: #20202a;
+                                font-size: 30px;
+                                font-family: $font-family;
+                                font-weight: bolder;
+                                text-transform: uppercase;
+
+                                position: absolute;
+                                left: 32%;
+                                top: 25%;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .blog-4 {
+                .content {
+                    h4 {
+                        color: $secondry-color;
+                        font-family: $font-family;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        padding-bottom: 12px;
+                    }
+                    span {
+                        display: block;
+                        color: $primary-color;
+                        font-family: $font-family;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        text-align: center;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .blog-5 {
+                padding: 30px 0px;
+                .svg-icon {
+                    width: 186px;
+                    fill: $primary-color;
+                    stroke: $secondry-color;
+                    position: relative;
+
+                    .span {
+                        position: absolute;
+                        top: 35%;
+                        left: 27%;
+                        font-family: $font-family;
+                        font-size: 16px;
+                        color: #20202a;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// experience section end
+
+// j&s-section start 
+
+    .journey-streamers-section {
+        background-image: url(../image/area_bg02.jpg);
+        padding: 190px 0px;
+        .journey-section {
+            padding: 20px 0px;
+            .content {
+                h2 {
+                    font-size: 45px;
+                    font-family: $font-family;
+                    font-weight: 900;
+                    letter-spacing: 4px;
+                    color: $secondry-color;
+                    text-transform: uppercase;
+                    padding-bottom: 45px;
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        box-sizing: border-box;
+                        background-image: url(../image/title_shape.svg);
+                        background-repeat: no-repeat;
+                        bottom: 18px;
+                        left: 0;
+                        width: 70px;
+                        height: 5px;
+                    }
+                }
+                p {
+                    font-size: 17px;
+                    color: #adb0bc;
+                    font-family: $font-family;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                }
+                .details {
+                    padding: 50px 0px;
+                    .blog-1 {
+                        .box-1{
+                            .menu {
+                                ul {
+                                    li {
+                                        padding: 0px 10px;
+                                        a {
+                                          color: $secondry-color;
+                                          font-family: $font-family;
+                                          font-size: 30px;
+                                          text-transform: uppercase;
+                                        }
+                                        span {
+                                            display: block;
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                            color: #adb0bc;
+                                            font-family: $font-family;
+                                            text-transform: uppercase;
+                                            padding-top: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .box-2 {
+                            padding: 40px 0px;
+                           .svg-icon {
+                            width: 156px;
+                            fill: transparent;
+                            stroke: $primary-color;
+                            position: relative;
+
+                            span {
+                                display: block;
+                                position: absolute;
+                                position: absolute;
+                                top: 28%;
+                                left: 22%;
+                                font-family: $font-family;
+                                font-size: 16px;
+                                color: $secondry-color;
+                                text-transform: uppercase;
+                                font-weight: 700;
+                            }
+                           }
+
+                           .icon {
+                                a {
+                                    display: inline-block;
+                                    width: 46px;
+                                    height: 46px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+                                    border: 2px solid $secondry-color;
+                                    transition: $transition;
+                                    i {
+                                        color: $primary-color;
+                                        transition: $transition;
+                                    }
+
+                                    &:hover {
+                                        background-color: $primary-color;
+                                        transition: $transition;
+                                        border: $secondry-color;
+                                        i {
+                                            color: black;
+                                            transition: $transition;
+                                        }
+                                    }
+                                }
+                                span {
+                                    font-family: $font-family;
+                                    font-size: 13px;
+                                    color: $secondry-color;
+                                    text-transform: capitalize;
+                                    font-weight: 600;
+                                    padding-left: 20px;
+                                    transition: $transition;
+
+                                    &:hover {
+                                        color: $primary-color;
+                                        transition: $transition;
+                                    }
+                                }
+                           }
+
+                        }
+                    }
+                    .blog-2 {
+                        .image {
+                            width: 137px;
+                            height: 137px;
+                            position: relative;
+                            margin: 0px auto;
+                            animation:  6s spin linear infinite;
+
+                            @keyframes spin {
+                                25% {
+                                    transform: rotate(90deg);
+                                }
+
+                                50% {
+                                    transform: rotate(180deg);
+                                }
+
+                                75% {
+                                    transform: rotate(270deg);
+                                }
+
+                                100% {
+                                    transform: rotate(360deg);
+                                }
+                            }
+
+                            &:hover {
+                                animation: stop;
+                            }
+                            
+
+                            svg {
+                                position: absolute;
+                                width: 80px;
+                                height: 80px;
+                                overflow: initial;
+                                left: 28px;
+                                top: 26px;
+                                transform: rotate(322deg);
+
+                                path {
+                                    fill: none;
+                                }
+
+                                text {
+                                    fill: white;
+                                    font-size: 22px;
+                                    font-weight: 600;
+                                    letter-spacing: 3px;
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .image-box {
+                .content {
+                    justify-content: end;
+                    .img {
+                        position: relative;
+                        max-width: 511px;
+
+
+                        &:hover {
+                            &::after {
+                                height: calc(100% + -4px);
+                                width: 100%;
+                                transform: rotate(0deg);
+                                bottom: 4px;
+                                right: 0px;
+                                transition: $transition;
+                            }
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            box-sizing: border-box;
+                            width: 100%;
+                            height: calc(100% + 15px);
+                            background-color: $primary-color;
+                            transform: rotate(5deg);
+                            right: -20px;
+                            bottom: 26px;
+                            opacity: 0.8;
+                            transition: $transition;
+                        } 
+
+                       
+
+                        .pera-img {
+                            position: relative;
+                            z-index: 2;
+                        }
+                        .main-img {
+                            position: absolute;
+                            z-index: 3;
+                            left: 80px;
+                            top: -115px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+// j&s-section end

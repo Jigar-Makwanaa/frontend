@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopwise</title>
+
+
+    <!-- output link start  -->
+    <link rel="stylesheet" href="css/output.css">
+    <!-- output link end  -->
+
+    <!-- fontawesome lionk start  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- fontawesome lionk end -->
+
+    <!-- icon link start  -->
+    <link rel="icon" href="img/icon-logo.png">
+    <!-- icon link end -->
+
+    <!-- tailwind cdn limk start  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind cdn limk end  -->
+
+
+    <!-- style css start  -->
+    <style>
+        .loader {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e8e8e8;
+            position: fixed;
+            top: 0;
+        }
+
+        .wrapper {
+            width: 200px;
+            height: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: #FF324D;
+            left: 15%;
+            transform-origin: 50%;
+            animation: circle7124 .5s alternate infinite ease;
+        }
+
+        @keyframes circle7124 {
+            0% {
+                top: 60px;
+                height: 5px;
+                border-radius: 50px 50px 25px 25px;
+                transform: scaleX(1.7);
+            }
+
+            40% {
+                height: 20px;
+                border-radius: 50%;
+                transform: scaleX(1);
+            }
+
+            100% {
+                top: 0%;
+            }
+        }
+
+        .circle:nth-child(2) {
+            left: 35%;
+            animation-delay: .2s;
+        }
+
+        .circle:nth-child(3) {
+            left: auto;
+            right: 35%;
+            animation-delay: .3s;
+        }
+
+        .shadow {
+            width: 20px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: rgb(165, 88, 98);
+            position: absolute;
+            top: 62px;
+            transform-origin: 50%;
+            z-index: -1;
+            left: 15%;
+            filter: blur(1px);
+            animation: shadow046 .5s alternate infinite ease;
+        }
+
+        @keyframes shadow046 {
+            0% {
+                transform: scaleX(1.5);
+            }
+
+            40% {
+                transform: scaleX(1);
+                opacity: .7;
+            }
+
+            100% {
+                transform: scaleX(.2);
+                opacity: .4;
+            }
+        }
+
+        .shadow:nth-child(4) {
+            left: 35%;
+            animation-delay: .2s
+        }
+
+        .shadow:nth-child(5) {
+            left: auto;
+            right: 35%;
+            animation-delay: .3s;
+        }
+
+        .main-page {
+            display: none;
+        }
+
+
+        /* corsor start */
+	
+.cursor {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	border: 1px solid #ff3853;
+	transition: all 200ms ease-out;
+	position: fixed;
+	pointer-events: none;
+	left: 0;
+	top: 0;
+	transform: translate(calc(-50% + 15px), -50%);
+	z-index: 12;
+  }
+  
+  .cursor2 {
+	width: 14px;
+	height: 14px;
+	border-radius: 100%;
+	background-color: #ff3853;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	transition: width .3s, height .3s, opacity .3s;
+	z-index: 12;
+  }
+  
+  .hover {
+	background-color: #ff3853;
+	opacity: 0.5;
+	z-index: 1;
+  }
+  
+  .cursorinnerhover {
+	width: 30px;
+	height: 30px;
+	opacity: .7;
+  }
+	/* corsor end */
+    </style> 
+    <!-- style css end -->
+
+</head>
+
+<body class="overflow-x-hidden">
+    <div class="main-page">
+
+    <!-- nav start  -->
+    <nav class="border-b-[2px] border-b-graysub ">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap py-4">
+                <div class="w-[100%] py-1 xs:w-[100%] md:w-[50%] lg:w-[50%] ">
+                    <ul class="flex flex-wrap justify-center md:justify-start">
+                        <li class="px-3 font-poppins flex items-center">
+                            <img src="img/eng.png" class="w-[16px] h-[16px] rounded-full">
+                            <a href="#" class="font-poppins text-[15px] text-gray ps-2">English <i
+                                    class="fa-solid fa-angle-down ps-2"></i></a>
+                        </li>
+                        <li class="px-3 font-poppins">
+                            <a href="#" class="font-poppins text-[15px] text-gray">USD <i
+                                    class="fa-solid fa-angle-down ps-2"></i></a>
+                        </li>
+                        <li class="px-3 font-poppins">
+                            <a href="#" class="font-poppins text-[15px] text-gray"> <i
+                                    class="fa-solid fa-mobile-screen pe-2"></i> 123-456-7890</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-[100%] py-1 xs:w-[100%] md:w-[50%] lg:w-[50%] ">
+                    <ul class="flex flex-wrap justify-center md:justify-end">
+                        <li>
+                            <a href="#"
+                                class="text-[15px] px-3 text-gray hover:text-second duration-200 font-poppins"><i
+                                    class="fa-solid fa-shuffle pe-1"></i> compare</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-[15px] px-3 text-gray hover:text-second duration-200 font-poppins"><i
+                                    class="fa-regular fa-heart pe-1"></i> wishlist </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-[15px] px-3 text-gray hover:text-second duration-200 font-poppins">
+                                <i class="fa-regular fa-user pe-1"></i> login </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end  -->
+
+    <!-- header start  -->
+    <header class="px-10 relative">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between">
+                <div class="logo w-[50%] xs:w-[40%] lg:w-[20%]">
+                    <img src="img/logo_dark.png" alt="">
+                </div>
+                <div class="menu hidden lg:block xs:w-[20%] lg:w-[70%]">
+                    <ul class="flex flex-wrap justify-center">
+                        <li class="p-5 font-[600] relative group/drop-down">
+                            <a href="#" class="text-[14px] hover:text-second duration-200 font-poppins">HOME <span><i
+                                        class="fa-solid fa-angle-down"></i></span></a>
+                            <div
+                                class="absolute group-hover/drop-down:-translate-y-10 opacity-0 invisible group-hover/drop-down:opacity-100 group-hover/drop-down:visible duration-500 min-w-[200px] z-50 bottom-[-244px] transition">
+                                <ul class="relative bg-white text-md duration-500">
+                                    <li
+                                        class="py-2 hover:text-second text-pera duration-200 border-t-4 border-t-second px-5">
+                                        <a href="#">Fashion 1</a>
+                                    </li>
+                                    <li class="hover:text-second text-pera duration-200 px-5 ">
+                                        <a href="#">Fashion 2</a>
+                                    </li>
+                                    <li class="py-2 text-second text-pera duration-200 px-5 ">
+                                        <a href="#">Furniture 1</a>
+                                    </li>
+                                    <li class="hover:text-second text-pera duration-200 px-5 ">
+                                        <a href="#">Furniture 2</a>
+                                    </li>
+                                    <li class="py-2 hover:text-second text-pera duration-200 px-5 ">
+                                        <a href="#">Electronics 1</a>
+                                    </li>
+                                    <li class="pb-2 hover:text-second text-pera duration-200 px-5 ">
+                                        <a href="#">Electronics 2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="p-5 font-[600] relative group/drop-down">
+                            <a href="#" class="text-[14px] hover:text-second duration-200 font-poppins">PAGES <span><i
+                                        class="fa-solid fa-angle-down"></i></span></a>
+                            <div
+                                class="absolute group-hover/drop-down:-translate-y-10 opacity-0 invisible group-hover/drop-down:opacity-100 group-hover/drop-down:visible duration-500 min-w-[200px] z-50 bottom-[-300px] transition">
+                                <ul class="relative bg-white text-md duration-500">
+                                    <li class="py-2 hover:text-second text-pera border-t-4 border-t-second px-5">
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li class="hover:text-second text-pera px-5">
+                                        <a href="#">Contact Us</a>
+                                    </li>
+                                    <li class="py-2 hover:text-second text-pera px-5">
+                                        <a href="#">Faq</a>
+                                    </li>
+                                    <li class="hover:text-second text-pera px-5">
+                                        <a href="#">404 Error Page</a>
+                                    </li>
+                                    <li class="py-2 hover:text-second text-pera px-5">
+                                        <a href="#">Login</a>
+                                    </li>
+                                    <li class="hover:text-second text-pera px-5">
+                                        <a href="#">Register</a>
+                                    </li>
+                                    <li class="py-2 hover:text-second text-pera px-5">
+                                        <a href="#">Terms And Condition</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="p-5 font-[600] relative group/drop-down">
+                            <a href="#" class="text-[14px] hover:text-second duration-200 font-poppins">PRODUCTS
+                                <span><i class="fa-solid fa-angle-down"></i></span></a>
+                            <div
+                                class="absolute group-hover/drop-down:-translate-y-10 opacity-0 invisible group-hover/drop-down:opacity-100 group-hover/drop-down:visible duration-500 z-50 bottom-[-104px] transition h-full left-[-500px]">
+
+                                <div
+                                    class="relative  p-5 bg-white min-w-[188%] z-40 duration-500 border-t-4 border-t-second">
+                                    <div class="grid grid-row-2">
+                                        <div>
+                                            <div class="grid grid-cols-4">
+                                                <div class="py-5">
+                                                    <h3 class="text-xl font-bold text-black py-2">WOMEN'S</h3>
+                                                    <ul class="text-lg">
+                                                        <li class="py-2 hover:text-second text-pera">
+                                                            <a href="#">Vestibulum Sed</a>
+                                                        </li>
+                                                        <li class="hover:text-second text-pera">
+                                                            <a href="#">Donec Porttitor</a>
+                                                        </li>
+                                                        <li class="py-2 hover:text-second text-pera">
+                                                            <a href="#">Donec Vitae Facilisis</a>
+                                                        </li>
+                                                        <li class="hover:text-second text-pera">
+                                                            <a href="#">Curabitur Tempus</a>
+                                                        </li>
+                                                        <li class="py-2 hover:text-second text-pera">
+                                                            <a href="#">Vivamus In Tortor</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="py-3 px-3 border-x-2 border-gray-100">
+                                                    <h3 class="text-xl font-bold text-black py-2">MEN's</h3>
+                                                    <ul class="text-lg capitalize">
+                                                        <li class="py-2 hover:text-second text-pera">
+                                                            <a href="#">Donec Vitae Ante Ante</a>
+                                                        </li>
+                                                        <li class="hover:text-second text-pera">
+                                                            <a href="#">Etaim Ac Rutrum</a>
+                                                        </li>
+                                                        <li class="py-2 hover:text-second text-pera">
+                                                            <a href="#">Quisque condimentum</a>
+                                                        </li>
+                                                        <li class="hover:text-second text-pera">
+                                                            <a href="#">Curabitur laoreet</a>
+                                                        </li>
+                                                        <li class="py-2 hover:text-second text-pera">
+                                                            <a href="#">Vivamus in tortor</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="py-3 px-3 border-r-2 border-gray-100">
+                                                    <h3 class="text-lg font-bold text-black py-2">KID'S</h3>
+                                                    <ul class="text-lg capitalize">
+                                                        <li class="py-2 hover:text-second text-pera">
+                                                            <a href="#">Donec vitae facilisis</a>
+                                                        </li>
+                                                        <li class="hover:text-second text-pera">
+                                                            <a href="#">Quisque condimentum</a>
+                                                        </li>
+                                                        <li class="py-2 hover:text-second text-pera">
+                                                            <a href="#">Etiam ac rutrum</a>
+                                                        </li>
+                                                        <li class="hover:text-second text-pera">
+                                                            <a href="#">Donec vitae ante ante</a>
+                                                        </li>
+                                                        <li class="py-2 hover:text-second text-pera">
+                                                            <a href="#">Donec porttitor</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="py-3 px-3">
+                                                    <h3 class="text-lg font-bold text-black py-2">ACCESSORIES
+                                                    </h3>
+                                                    <ul class="text-lg capitalize">
+                                                        <li class="py-2 hover:text-second text-pera">
+                                                            <a href="#">Donec vitae facilisis</a>
+                                                        </li>
+                                                        <li class="hover:text-second text-pera">
+                                                            <a href="#">Quisque condimentum</a>
+                                                        </li>
+                                                        <li class="py-2 hover:text-second text-pera">
+                                                            <a href="#">Etiam ac rutrum</a>
+                                                        </li>
+                                                        <li class="hover:text-second text-pera">
+                                                            <a href="#">Donec vitae ante ante</a>
+                                                        </li>
+                                                        <li class="py-2 hover:text-second text-pera">
+                                                            <a href="#">Donec porttitor</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-3 pt-10">
+                                                <div
+                                                    class="bg-[url(img/menu_banner11.jpg)] bg-cover pt-10 px-5 relative">
+                                                    <div class="absolute right-[20px]">
+                                                        <span class="text-lg font-bold">10% off</span>
+                                                        <h2 class="text-2xl font-bold py-2">Wooden Chair</h2>
+                                                        <button>
+                                                            <a href="#" class="hover:text-second duration-200">Shop
+                                                                Now</a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="bg-[url(img/menu_banner22.jpg)] bg-cover py-24 px-5 relative items-center flex">
+                                                    <div class="absolute right-[20px]">
+                                                        <span class="text-lg font-bold">15% off</span>
+                                                        <h2 class="text-2xl font-bold py-2">Wooden Chair</h2>
+                                                        <button>
+                                                            <a href="#" class="hover:text-second duration-200">Shop
+                                                                Now</a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="bg-[url(img/menu_banner33.jpg)] bg-cover py-24 px-5 relative items-center flex">
+                                                    <div class="absolute right-[20px]">
+                                                        <span class="text-lg font-bold">23% off</span>
+                                                        <h2 class="text-2xl font-bold py-2">Wooden Chair</h2>
+                                                        <button>
+                                                            <a href="#" class="hover:text-second duration-200">Shop
+                                                                Now</a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="p-5 font-[600] relative group/drop-down">
+                            <a href="#" class="text-[14px] hover:text-second duration-200 font-poppins">BLOG <span><i
+                                        class="fa-solid fa-angle-down"></i></span></a>
+                            <div
+                                class="absolute group-hover/drop-down:-translate-y-10 opacity-0 invisible group-hover/drop-down:opacity-100 group-hover/drop-down:visible duration-500 min-w-[200px] z-50 bottom-[-200px] transition">
+
+                                <ul class="relative bg-white text-md duration-500">
+
+                                    <li
+                                        class="py-2 hover:text-second text-pera flex justify-between border-t-4 border-t-second px-5">
+                                        <a href="#">Grids</a>
+                                        <i class="fa-solid fa-angle-right text-xs ps-1"></i>
+                                    </li>
+
+                                    <li class="py-2 hover:text-second text-pera flex justify-between px-5">
+                                        <a href="#">Mansonry</a>
+                                        <i class="fa-solid fa-angle-right text-xs ps-1"></i>
+                                    </li>
+
+                                    <li class="py-2 hover:text-second text-pera flex justify-between px-5">
+                                        <a href="#">Single Post</a>
+                                        <i class="fa-solid fa-angle-right text-xs ps-1"></i>
+                                    </li>
+
+                                    <li class="py-2 hover:text-second text-pera flex justify-between px-5">
+                                        <a href="#">List</a>
+                                        <i class="fa-solid fa-angle-right text-xs ps-1"></i>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="p-5 font-[600] relative group/drop-down">
+                            <a href="#" class="text-[14px] hover:text-second duration-200 font-poppins">SHOP <span><i
+                                        class="fa-solid fa-angle-down"></i></span></a>
+                            <div
+                                class="absolute group-hover/drop-down:-translate-y-10 opacity-0 invisible group-hover/drop-down:opacity-100 group-hover/drop-down:visible duration-500 z-50 bottom-[-60px] transition h-full left-[-500px]">
+
+                                <div
+                                    class="relative top-6 p-5 bg-white min-w-[156%] z-40 duration-500 border-t-4 border-t-second">
+                                    <div class="grid grid-cols-4">
+                                        <div class="py-5">
+                                            <h3 class="text-lg font-bold text-black py-2">SHOP PAGE LAYOUT</h3>
+                                            <ul>
+                                                <li class="py-2 hover:text-second text-pera">
+                                                    <a href="#">Shop List View</a>
+                                                </li>
+                                                <li class="hover:text-second text-pera">
+                                                    <a href="#">Shop List Left Sidebar</a>
+                                                </li>
+                                                <li class="py-2 hover:text-second text-pera">
+                                                    <a href="#">Shop List Right Sidebar</a>
+                                                </li>
+                                                <li class="hover:text-second text-pera">
+                                                    <a href="#">Left Sidebar</a>
+                                                </li>
+                                                <li class="py-2 hover:text-second text-pera">
+                                                    <a href="#">Right Sidebar</a>
+                                                </li>
+                                                <li class="hover:text-second text-pera">
+                                                    <a href="#">Shop Load More</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="py-3 px-3 border-x-2 border-gray-100">
+                                            <h3 class="text-lg font-bold text-black py-2">OTHER PAGES</h3>
+                                            <ul>
+                                                <li class="py-2 hover:text-second text-pera">
+                                                    <a href="#">Cart</a>
+                                                </li>
+                                                <li class="hover:text-second text-pera">
+                                                    <a href="#">Checkout</a>
+                                                </li>
+                                                <li class="py-2 hover:text-second text-pera">
+                                                    <a href="#">My Account</a>
+                                                </li>
+                                                <li class="hover:text-second text-pera">
+                                                    <a href="#">Wishlist</a>
+                                                </li>
+                                                <li class="py-2 hover:text-second text-pera">
+                                                    <a href="#">Compare</a>
+                                                </li>
+                                                <li class="hover:text-second text-pera">
+                                                    <a href="#">Order Completed</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="py-3 px-3 border-r-2 border-gray-100">
+                                            <h3 class="text-lg font-bold text-black py-2">PRODUCT PAGES</h3>
+                                            <ul>
+                                                <li class="py-2 hover:text-second text-pera">
+                                                    <a href="#">Default</a>
+                                                </li>
+                                                <li class="hover:text-second text-pera">
+                                                    <a href="#">Left Sidebar</a>
+                                                </li>
+                                                <li class="py-2 hover:text-second text-pera">
+                                                    <a href="#">Right Sidebar</a>
+                                                </li>
+                                                <li class="hover:text-second text-pera">
+                                                    <a href="#">Thumbnails Left</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div
+                                            class="bg-[url(img/shop_banner1.jpg)] m-3 text-white font-bold px-3 relative bg-blend-darken	">
+                                            <div class="absolute bottom-[5px]">
+                                                <p class="text-xl">NEW COLLECTIONS</p>
+                                                <h2 class="text-3xl">SALE 30% OFF</h2>
+
+                                                <a href="#"
+                                                    class="border border-4-white px-10 py-4 text-second font-[600] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-white after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-white before:hover:w-[00%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-white hover:duration-500">shop
+                                                    now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="p-5 font-[600] relative group/drop-down">
+                            <a href="#" class="text-[14px] hover:text-second duration-200 font-poppins">CONTACT US </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="toggle w-[10%] flex justify-center lg:hidden">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="icon w-[40%] xs:w-[30%] lg:w-[10%]">
+                    <ul class="flex flex-wrap justify-end">
+                        <li class="px-3">
+                            <a href="#"><i class="fa-solid fa-magnifying-glass hover:text-second duration-200"></i></a>
+                        </li>
+                        <li class="px-3">
+                            <a href="#"><i class="fa-solid fa-cart-shopping hover:text-second duration-200"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header> 
+    <!-- header end -->
+
+    <!-- slider section start  -->
+    <section class="bg-auto py-[60px] px-10 lg:px-0 lg:py-[60px] xl:py-[80px] 2xl:py-[160px] bg-[url('./img/banner7.jpg')] bg-no-repeat bg-cover ">
+        <div class="container mx-auto">
+            <div class="flex">
+                <div class="content w-[100%] md:w-[50%]">
+                    <h3 class="font-roboto text-[20px] font-[600] pb-3 xs:text-[15px] sm:text-[18px] ">Get up to 50% off
+                        Today Only!</h3>
+                    <h2 class="font-roboto font-[700] leading-[1.2] text-[30px] md:text-[50px] xl:text-[70px]">
+                        Wooden Chair Collection</h2>
+                    <div class="btn pt-7 sm:pt-5">
+                        <a href="#"
+                            class="border border-solid border-second rounded-[60px] px-10 py-4 text-second font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block relative overflow-hidden after:absolute after:content=[''] after:w-[0%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[50%] after:duration-500 before:absolute before:content=[''] before:w-[0%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[50%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-white hover:duration-500">shop
+                            now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- slider section end -->
+
+    <!-- blog section start  -->
+    <section class="blog-section pt-[110px] pb-[50px] px-10 lg:px-0">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap">
+                <div
+                    class="box flex flex-wrap items-center border border-graybox px-4 py-5 group/item w-[100%] md:w-[50%] lg:w-[25%] ">
+                    <img src="img/fast-delivery.png" alt="" class="w-[36px] group-hover/item:scale-125 duration-200">
+                    <div class="info ps-5">
+                        <h4 class="text-gray font-roboto font-[600]">Free Delivery</h4>
+                        <p class="text-pera font-poppins text-[14px] font-[600]">Worldwide</p>
+                    </div>
+                </div>
+
+                <div
+                    class="box flex flex-wrap items-center border border-graybox px-4 py-5 group/item  w-[100%] md:w-[50%] lg:w-[25%] ">
+                    <img src="img/save-money.png" alt="" class="w-[36px] group-hover/item:scale-125 duration-200">
+                    <div class="info ps-5">
+                        <h4 class="text-gray font-roboto font-[600]">Money Returns</h4>
+                        <p class="text-pera font-poppins text-[14px] font-[600]">30 Days money return</p>
+                    </div>
+                </div>
+
+                <div
+                    class="box flex flex-wrap items-center border border-graybox px-4 py-5 group/item w-[100%] md:w-[50%] lg:w-[25%] ">
+                    <img src="img/online-support.png" alt="" class="w-[36px] group-hover/item:scale-125 duration-200">
+                    <div class="info ps-5">
+                        <h4 class="text-gray font-roboto font-[600]">27/4 Online Support</h4>
+                        <p class="text-pera font-poppins text-[14px] font-[600]">Customer Support</p>
+                    </div>
+                </div>
+
+                <div
+                    class="box flex flex-wrap items-center border border-graybox px-4 py-5 group/item w-[100%] md:w-[50%] lg:w-[25%]">
+                    <img src="img/security-payment.png" alt="" class="w-[36px] group-hover/item:scale-125 duration-200">
+                    <div class="info ps-5">
+                        <h4 class="text-gray font-roboto font-[600]">Payment Security</h4>
+                        <p class="text-pera font-poppins text-[14px] font-[600]">Safe Payment</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- blog section end -->
+
+    <!-- Exclusive Products section start  -->
+    <section class="Exclusive-Products pt-[40px] pb-[30px] px-10 lg:px-0">
+        <div class="container mx-auto">
+            <div class="heading py-6">
+                <h2 class="text-gray text-[32px] font-roboto font-[700] text-center">Exclusive Products </h2>
+            </div>
+            <div class="main-card flex flex-wrap justify-between">
+                <div class="w-[80%] mx-auto md:w-[48%] lg:w-[32%] xl:w-[24%] my-3 lg:w-[24%]">
+                    <div class="border border-graybox rounded-[15px] overflow-hidden group/item">
+                        <div class="image relative">
+                            <img src="img/furniture_img1.jpg" alt="">
+                            <div
+                                class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.2)] absolute top-0 left-0 opacity-0 group-hover/item:opacity-100 duration-500">
+                                <div
+                                    class="icon absolute top-[-10%] left-[0%] translate-x-[-50] invisible group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[50%] duration-500 2xl:w-[100%] ">
+                                    <ul class="flex flex-wrap justify-center ">
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-shuffle"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content text-center py-4 relative">
+                            <h3 class="text-gray text-[16px] font-roboto py-2 font-[600]">Enim Expedita Sed</h3>
+                            <p class="text-second font-[600] t-2"><span>$45.00</span> <span
+                                    class="text-pera font-[400] ps-3"> <del>$55.25</del></span></p>
+                            <ul class="flex flex-wrap justify-center pt-2">
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-regular fa-star" style="color: #ffd43b;"></i></li>
+                                <li class="text-pera ps-2">(21)</li>
+                            </ul>
+                            <div
+                                class="btn pt-7 sm:pt-5 btn pt-7 top-[90%] absolute group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[31%] duration-500 2xl:w-[100%]">
+                                <a href="#"
+                                    class="border border-solid border-second rounded-[60px] px-10 py-4 text-white font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block bg-white relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[0%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-second hover:duration-500"><span><i
+                                            class="fa-solid fa-cart-shopping"></i></span> shop
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[80%] mx-auto md:w-[48%] lg:w-[32%] xl:w-[24%] my-3 lg:w-[24%]">
+                    <div class="border border-graybox rounded-[15px] overflow-hidden group/item">
+                        <div class="image relative">
+                            <img src="img/furniture_img2.jpg" alt="">
+                            <div
+                                class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.2)] absolute top-0 left-0 opacity-0 group-hover/item:opacity-100 duration-500">
+                                <div
+                                    class="icon absolute top-[-10%] left-[0%] translate-x-[-50] invisible group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[50%] duration-500 2xl:w-[100%] ">
+                                    <ul class="flex flex-wrap justify-center ">
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-shuffle"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content text-center py-4 relative">
+                            <h3 class="text-gray text-[16px] font-roboto py-2 font-[600]">Adipisci officia libero</h3>
+                            <p class="text-second font-[600] t-2"><span>$55.00</span> <span
+                                    class="text-pera font-[400] ps-3"> <del>$95.00</del></span></p>
+                            <ul class="flex flex-wrap justify-center pt-2">
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star-half-stroke" style="color: #ffd44f;"></i></li>
+                                <li><i class="fa-regular fa-star" style="color: #ffd43b;"></i></li>
+                                <li class="text-pera ps-2">(15)</li>
+                            </ul>
+                            <div
+                                class="btn pt-7 sm:pt-5 btn pt-7 top-[90%] absolute group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[31%] duration-500 2xl:w-[100%]">
+                                <a href="#"
+                                    class="border border-solid border-second rounded-[60px] px-10 py-4 text-white font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block bg-white relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[0%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-second hover:duration-500"><span><i
+                                            class="fa-solid fa-cart-shopping"></i></span> shop
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[80%] mx-auto md:w-[48%] lg:w-[32%] xl:w-[24%] my-3 lg:w-[24%]">
+                    <div class="border border-graybox rounded-[15px] overflow-hidden group/item">
+                        <div class="image relative">
+                            <img src="img/furniture_img3.jpg" alt="">
+                            <div
+                                class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.2)] absolute top-0 left-0 opacity-0 group-hover/item:opacity-100 duration-500">
+                                <div
+                                    class="icon absolute top-[-10%] left-[0%] translate-x-[-50] invisible group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[50%] duration-500 2xl:w-[100%] ">
+                                    <ul class="flex flex-wrap justify-center ">
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-shuffle"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content text-center py-4 relative">
+                            <h3 class="text-gray text-[16px] font-roboto py-2 font-[600]">Internet tend to repeat</h3>
+                            <p class="text-second font-[600] t-2"><span>$68.00</span> <span
+                                    class="text-pera font-[400] ps-3"> <del>$98.00</del></span></p>
+                            <ul class="flex flex-wrap justify-center pt-2">
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star-half-stroke" style="color: #ffd44f;"></i>
+                                <li><i class="fa-regular fa-star" style="color: #ffd43b;"></i></li>
+                                <li class="text-pera ps-2">(25)</li>
+                            </ul>
+                            <div
+                                class="btn pt-7 sm:pt-5 btn pt-7 top-[90%] absolute group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[31%] duration-500 2xl:w-[100%]">
+                                <a href="#"
+                                    class="border border-solid border-second rounded-[60px] px-10 py-4 text-white font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block bg-white relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[0%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-second hover:duration-500"><span><i
+                                            class="fa-solid fa-cart-shopping"></i></span> shop
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[80%] mx-auto md:w-[48%] lg:w-[32%] xl:w-[24%] my-3 lg:w-[24%]">
+                    <div class="border border-graybox rounded-[15px] overflow-hidden group/item">
+                        <div class="image relative">
+                            <img src="img/furniture_img4.jpg" alt="">
+                            <div
+                                class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.2)] absolute top-0 left-0 opacity-0 group-hover/item:opacity-100 duration-500">
+                                <div
+                                    class="icon absolute top-[-10%] left-[0%] translate-x-[-50] invisible group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[50%] duration-500 2xl:w-[100%] ">
+                                    <ul class="flex flex-wrap justify-center ">
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-shuffle"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content text-center py-4 relative">
+                            <h3 class="text-gray text-[16px] font-roboto py-2 font-[600]">Many desktop publishing</h3>
+                            <p class="text-second font-[600] t-2"><span>$69.00</span> <span
+                                    class="text-pera font-[400] ps-3"> <del>$89.00</del></span></p>
+                            <ul class="flex flex-wrap justify-center pt-2">
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-regular fa-star" style="color: #ffd43b;"></i></li>
+                                <li class="text-pera ps-2">(22)</li>
+                            </ul>
+                            <div
+                                class="btn pt-7 sm:pt-5 btn pt-7 top-[90%] absolute group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[31%] duration-500 2xl:w-[100%]">
+                                <a href="#"
+                                    class="border border-solid border-second rounded-[60px] px-10 py-4 text-white font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block bg-white relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[0%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-second hover:duration-500"><span><i
+                                            class="fa-solid fa-cart-shopping"></i></span> shop
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[80%] mx-auto md:w-[48%] lg:w-[32%] xl:w-[24%] my-3 lg:w-[24%]">
+                    <div class="border border-graybox rounded-[15px] overflow-hidden group/item">
+                        <div class="image relative">
+                            <img src="img/furniture_img5.jpg" alt="">
+                            <div
+                                class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.2)] absolute top-0 left-0 opacity-0 group-hover/item:opacity-100 duration-500">
+                                <div
+                                    class="icon absolute top-[-10%] left-[0%] translate-x-[-50] invisible group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[50%] duration-500 2xl:w-[100%] ">
+                                    <ul class="flex flex-wrap justify-center ">
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-shuffle"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content text-center py-4 relative">
+                            <h3 class="text-gray text-[16px] font-roboto py-2 font-[600]">injected humour repetition
+                            </h3>
+                            <p class="text-second font-[600] t-2"><span>$45.00</span> <span
+                                    class="text-pera font-[400] ps-3"> <del>$55.25</del></span></p>
+                            <ul class="flex flex-wrap justify-center pt-2">
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-regular fa-star" style="color: #ffd43b;"></i></li>
+                                <li class="text-pera ps-2">(21)</li>
+                            </ul>
+                            <div
+                                class="btn pt-7 sm:pt-5 btn pt-7 top-[90%] absolute group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[31%] duration-500 2xl:w-[100%]">
+                                <a href="#"
+                                    class="border border-solid border-second rounded-[60px] px-10 py-4 text-white font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block bg-white relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[0%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-second hover:duration-500"><span><i
+                                            class="fa-solid fa-cart-shopping"></i></span> shop
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[80%] mx-auto md:w-[48%] lg:w-[32%] xl:w-[24%] my-3 lg:w-[24%]">
+                    <div class="border border-graybox rounded-[15px] overflow-hidden group/item">
+                        <div class="image relative">
+                            <img src="img/furniture_img6.jpg" alt="">
+                            <div
+                                class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.2)] absolute top-0 left-0 opacity-0 group-hover/item:opacity-100 duration-500">
+                                <div
+                                    class="icon absolute top-[-10%] left-[0%] translate-x-[-50] invisible group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[50%] duration-500 2xl:w-[100%] ">
+                                    <ul class="flex flex-wrap justify-center ">
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-shuffle"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content text-center py-4 relative">
+                            <h3 class="text-gray text-[16px] font-roboto py-2 font-[600]">randomised humour words</h3>
+                            <p class="text-second font-[600] t-2"><span>$55.00</span> <span
+                                    class="text-pera font-[400] ps-3"> <del>$95.00</del></span></p>
+                            <ul class="flex flex-wrap justify-center pt-2">
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star-half-stroke" style="color: #ffd44f;"></i></li>
+                                <li><i class="fa-regular fa-star" style="color: #ffd43b;"></i></li>
+                                <li class="text-pera ps-2">(15)</li>
+                            </ul>
+                            <div
+                                class="btn pt-7 sm:pt-5 btn pt-7 top-[90%] absolute group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[31%] duration-500 2xl:w-[100%]">
+                                <a href="#"
+                                    class="border border-solid border-second rounded-[60px] px-10 py-4 text-white font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block bg-white relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[0%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-second hover:duration-500"><span><i
+                                            class="fa-solid fa-cart-shopping"></i></span> shop
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[80%] mx-auto md:w-[48%] lg:w-[32%] xl:w-[24%] my-3 lg:w-[24%]">
+                    <div class="border border-graybox rounded-[15px] overflow-hidden group/item">
+                        <div class="image relative">
+                            <img src="img/furniture_img7.jpg" alt="">
+                            <div
+                                class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.2)] absolute top-0 left-0 opacity-0 group-hover/item:opacity-100 duration-500">
+                                <div
+                                    class="icon absolute top-[-10%] left-[0%] translate-x-[-50] invisible group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[50%] duration-500 2xl:w-[100%] ">
+                                    <ul class="flex flex-wrap justify-center ">
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-shuffle"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content text-center py-4 relative">
+                            <h3 class="text-gray text-[16px] font-roboto py-2 font-[600]">expedita distinctio rerum</h3>
+                            <p class="text-second font-[600] t-2"><span>$68.00</span> <span
+                                    class="text-pera font-[400] ps-3"> <del>$99.99</del></span></p>
+                            <ul class="flex flex-wrap justify-center pt-2">
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star-half-stroke" style="color: #ffd44f;"></i>
+                                <li><i class="fa-regular fa-star" style="color: #ffd43b;"></i></li>
+                                <li class="text-pera ps-2">(25)</li>
+                            </ul>
+                            <div
+                                class="btn pt-7 sm:pt-5 btn pt-7 top-[90%] absolute group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[31%] duration-500 2xl:w-[100%]">
+                                <a href="#"
+                                    class="border border-solid border-second rounded-[60px] px-10 py-4 text-white font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block bg-white relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[0%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-second hover:duration-500"><span><i
+                                            class="fa-solid fa-cart-shopping"></i></span> shop
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[80%] mx-auto md:w-[48%] lg:w-[32%] xl:w-[24%] my-3 lg:w-[24%]">
+                    <div class="border border-graybox rounded-[15px] overflow-hidden group/item">
+                        <div class="image relative">
+                            <img src="img/furniture_img8.jpg" alt="">
+                            <div
+                                class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.2)] absolute top-0 left-0 opacity-0 group-hover/item:opacity-100 duration-500">
+                                <div
+                                    class="icon absolute top-[-10%] left-[0%] translate-x-[-50] invisible group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[50%] duration-500 2xl:w-[100%] ">
+                                    <ul class="flex flex-wrap justify-center ">
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-shuffle"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content text-center py-4 relative">
+                            <h3 class="text-gray text-[16px] font-roboto py-2 font-[600]">Itaque earum rerum</h3>
+                            <p class="text-second font-[600] t-2"><span>$69.00</span> <span
+                                    class="text-pera font-[400] ps-3"> <del>$89.00</del></span></p>
+                            <ul class="flex flex-wrap justify-center pt-2">
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-regular fa-star" style="color: #ffd43b;"></i></li>
+                                <li class="text-pera ps-2">(22)</li>
+                            </ul>
+                            <div
+                                class="btn pt-7 sm:pt-5 btn pt-7 top-[90%] absolute group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[31%] duration-500 2xl:w-[100%]">
+                                <a href="#"
+                                    class="border border-solid border-second rounded-[60px] px-10 py-4 text-white font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block bg-white relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[0%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-second hover:duration-500"><span><i
+                                            class="fa-solid fa-cart-shopping"></i></span> shop
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Exclusive Products section end -->
+
+    <!-- slogan section start  -->
+    <section class="slogan-section">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-[70%] mx-auto my-2 md:w-[80%] lg:w-[39%] relative overflow-hidden">
+                    <img src="img/furniture_banner1.jpg" class="h-[100%] scale-[1] hover:scale-[1.1] duration-500 md:w-[100%]"
+                        alt="">
+                    <div class="details absolute top-[20px] left-[20px]">
+                        <h4 class="text-[20px] font-[400] font-roboto">Super Sale</h4>
+                        <h2 class="text-[32px] font-[600] py-1 font-roboto">New Collection</h2>
+                        <a href="#"
+                            class="relative after:absolute after:content-[''] after:w-[100%] after:h-[7px] after:bg-[#ff324d33] after:left-[0px] after:bottom-[-1px] hover:text-second duration-200">Shop
+                            Now</a>
+                    </div>
+                </div>
+                <div class="w-[70%] mx-auto my-2 md:w-[80%] lg:w-[59%] relative overflow-hidden">
+                    <img src="img/furniture_banner2.jpg" class="w-[100%] scale-[1] hover:scale-[1.1] duration-500"
+                        alt="">
+                    <div class="details absolute top-[30%] left-[20px]">
+                        <h4 class="text-[32px] font-[600] font-roboto">New Season</h4>
+                        <h2 class="text-[24px] font-[400] py-1 font-roboto">Sale 40% Off</h2>
+                        <a href="#"
+                            class="relative after:absolute after:content-[''] after:w-[100%] after:h-[7px] after:bg-[#ff324d33] after:left-[0px] after:bottom-[-1px] hover-text-second hover:text-second duration-200">Shop
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- slogan section end -->
+
+    <!-- Trending Items section start  -->
+    <section class="Trending-Items pt-[40px] pb-[30px]">
+        <div class="container mx-auto">
+            <div class="heading flex flex-wrap justify-between items-center py-6">
+                <span class="text-[25px] display-block"><i class="fa-solid fa-arrow-left-long"></i></span>
+                <h2 class="text-gray text-[32px] font-roboto font-[700] text-center">Trending Items</h2>
+                <span class="text-[25px] display-block"><i class="fa-solid fa-arrow-right-long"></i></span>
+            </div>
+            <div class="main-card flex flex-wrap justify-between">
+                <div class="w-[80%] mx-auto md:w-[48%] lg:w-[32%] xl:w-[24%] my-3 lg:w-[24%]">
+                    <div class="border border-graybox rounded-[15px] overflow-hidden group/item">
+                        <div class="image relative">
+                            <img src="img/furniture_img1.jpg" alt="">
+                            <div
+                                class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.2)] absolute top-0 left-0 opacity-0 group-hover/item:opacity-100 duration-500">
+                                <div
+                                    class="icon absolute top-[-10%] left-[0%] translate-x-[-50] invisible group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[50%] duration-500 2xl:w-[100%] ">
+                                    <ul class="flex flex-wrap justify-center ">
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-shuffle"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content text-center py-4 relative">
+                            <h3 class="text-gray text-[16px] font-roboto py-2 font-[600]">Enim Expedita Sed</h3>
+                            <p class="text-second font-[600] t-2"><span>$45.00</span> <span
+                                    class="text-pera font-[400] ps-3"> <del>$55.25</del></span></p>
+                            <ul class="flex flex-wrap justify-center pt-2">
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-regular fa-star" style="color: #ffd43b;"></i></li>
+                                <li class="text-pera ps-2">(21)</li>
+                            </ul>
+                            <div
+                                class="btn pt-7 sm:pt-5 btn pt-7 top-[90%] absolute group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[31%] duration-500 2xl:w-[100%]">
+                                <a href="#"
+                                    class="border border-solid border-second rounded-[60px] px-10 py-4 text-white font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block bg-white relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[0%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-second hover:duration-500"><span><i
+                                            class="fa-solid fa-cart-shopping"></i></span> shop
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[80%] mx-auto md:w-[48%] lg:w-[32%] xl:w-[24%] my-3 lg:w-[24%]">
+                    <div class="border border-graybox rounded-[15px] overflow-hidden group/item">
+                        <div class="image relative">
+                            <img src="img/furniture_img2.jpg" alt="">
+                            <div
+                                class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.2)] absolute top-0 left-0 opacity-0 group-hover/item:opacity-100 duration-500">
+                                <div
+                                    class="icon absolute top-[-10%] left-[0%] translate-x-[-50] invisible group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[50%] duration-500 2xl:w-[100%] ">
+                                    <ul class="flex flex-wrap justify-center ">
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-shuffle"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content text-center py-4 relative">
+                            <h3 class="text-gray text-[16px] font-roboto py-2 font-[600]">Adipisci officia libero</h3>
+                            <p class="text-second font-[600] t-2"><span>$55.00</span> <span
+                                    class="text-pera font-[400] ps-3"> <del>$95.00</del></span></p>
+                            <ul class="flex flex-wrap justify-center pt-2">
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star-half-stroke" style="color: #ffd44f;"></i></li>
+                                <li><i class="fa-regular fa-star" style="color: #ffd43b;"></i></li>
+                                <li class="text-pera ps-2">(15)</li>
+                            </ul>
+                            <div
+                                class="btn pt-7 sm:pt-5 btn pt-7 top-[90%] absolute group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[31%] duration-500 2xl:w-[100%]">
+                                <a href="#"
+                                    class="border border-solid border-second rounded-[60px] px-10 py-4 text-white font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block bg-white relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[0%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-second hover:duration-500"><span><i
+                                            class="fa-solid fa-cart-shopping"></i></span> shop
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[80%] mx-auto md:w-[48%] lg:w-[32%] xl:w-[24%] my-3 lg:w-[24%]">
+                    <div class="border border-graybox rounded-[15px] overflow-hidden group/item">
+                        <div class="image relative">
+                            <img src="img/furniture_img3.jpg" alt="">
+                            <div
+                                class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.2)] absolute top-0 left-0 opacity-0 group-hover/item:opacity-100 duration-500">
+                                <div
+                                    class="icon absolute top-[-10%] left-[0%] translate-x-[-50] invisible group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[50%] duration-500 2xl:w-[100%] ">
+                                    <ul class="flex flex-wrap justify-center ">
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-shuffle"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content text-center py-4 relative">
+                            <h3 class="text-gray text-[16px] font-roboto py-2 font-[600]">Internet tend to repeat</h3>
+                            <p class="text-second font-[600] t-2"><span>$68.00</span> <span
+                                    class="text-pera font-[400] ps-3"> <del>$98.00</del></span></p>
+                            <ul class="flex flex-wrap justify-center pt-2">
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star-half-stroke" style="color: #ffd44f;"></i>
+                                <li><i class="fa-regular fa-star" style="color: #ffd43b;"></i></li>
+                                <li class="text-pera ps-2">(25)</li>
+                            </ul>
+                            <div
+                                class="btn pt-7 sm:pt-5 btn pt-7 top-[90%] absolute group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[31%] duration-500 2xl:w-[100%]">
+                                <a href="#"
+                                    class="border border-solid border-second rounded-[60px] px-10 py-4 text-white font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block bg-white relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[0%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-second hover:duration-500"><span><i
+                                            class="fa-solid fa-cart-shopping"></i></span> shop
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[80%] mx-auto md:w-[48%] lg:w-[32%] xl:w-[24%] my-3 lg:w-[24%]">
+                    <div class="border border-graybox rounded-[15px] overflow-hidden group/item">
+                        <div class="image relative">
+                            <img src="img/furniture_img4.jpg" alt="">
+                            <div
+                                class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.2)] absolute top-0 left-0 opacity-0 group-hover/item:opacity-100 duration-500">
+                                <div
+                                    class="icon absolute top-[-10%] left-[0%] translate-x-[-50] invisible group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[50%] duration-500 2xl:w-[100%] ">
+                                    <ul class="flex flex-wrap justify-center ">
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-shuffle"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                        </li>
+
+                                        <li class="px-2">
+                                            <a href="#"
+                                                class="p-[16px] bg-white rounded-[50%] hover:bg-second duration-200 hover:text-white"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content text-center py-4 relative">
+                            <h3 class="text-gray text-[16px] font-roboto py-2 font-[600]">Many desktop publishing</h3>
+                            <p class="text-second font-[600] t-2"><span>$69.00</span> <span
+                                    class="text-pera font-[400] ps-3"> <del>$89.00</del></span></p>
+                            <ul class="flex flex-wrap justify-center pt-2">
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-solid fa-star" style="color: #ffd43b;"></i></li>
+                                <li><i class="fa-regular fa-star" style="color: #ffd43b;"></i></li>
+                                <li class="text-pera ps-2">(22)</li>
+                            </ul>
+                            <div
+                                class="btn pt-7 sm:pt-5 btn pt-7 top-[90%] absolute group-hover/item:visible group-hover/item:left-[0%]  group-hover/item:top-[31%] duration-500 2xl:w-[100%]">
+                                <a href="#"
+                                    class="border border-solid border-second rounded-[60px] px-10 py-4 text-white font-[500] xs:px-7 xs:py-3 sm:py-3 sm:px:8 sm:inline-block bg-white relative overflow-hidden after:absolute after:content=[''] after:w-[50%] after:h-[100%] after:left-[0%] after:top-[0%] after:bg-second after:hover:w-[0%] after:duration-500 before:absolute before:content=[''] before:w-[50%] before:h-[100%] before:right-[0%] before:top-[0%] before:bg-second before:hover:w-[0%] before:duration-500 after:-z-10 before:-z-10 z-10 hover:text-second hover:duration-500"><span><i
+                                            class="fa-solid fa-cart-shopping"></i></span> shop
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Trending Items section end -->
+
+    <!-- shoppingzone section start  -->
+    <section class="shopiingzone py-10 relative overflow-hidden">
+        <div class="main flex flex-wrap">
+            <div class="image w-[33.33%] md:w-[33.33%] lg:w-[33.33%] xl:w-[16.66%] overflow-hidden">
+                <img src="img/furniture_insta1.jpg" class="w-[100%] hover:scale-[1.1] duration-500 hover:brightness-50"
+                    alt="">
+            </div>
+
+            <div class="image w-[33.33%] md:w-[33.33%] lg:w-[33.33%] xl:w-[16.66%] overflow-hidden">
+                <img src="img/furniture_insta2.jpg" class="w-[100%] hover:scale-[1.1] duration-500 hover:brightness-50"
+                    alt="">
+            </div>
+
+            <div class="image w-[33.33%] md:w-[33.33%] lg:w-[33.33%] xl:w-[16.66%] overflow-hidden">
+                <img src="img/furniture_insta3.jpg" class="w-[100%] hover:scale-[1.1] duration-500 hover:brightness-50"
+                    alt="">
+            </div>
+
+            <div class="image w-[33.33%] md:w-[33.33%] lg:w-[33.33%] xl:w-[16.66%] overflow-hidden">
+                <img src="img/furniture_insta4.jpg" class="w-[100%] hover:scale-[1.1] duration-500 hover:brightness-50"
+                    alt="">
+            </div>
+
+            <div class="image w-[33.33%] md:w-[33.33%] lg:w-[33.33%] xl:w-[16.66%] overflow-hidden">
+                <img src="img/furniture_insta5.jpg" class="w-[100%] hover:scale-[1.1] duration-500 hover:brightness-50"
+                    alt="">
+            </div>
+
+            <div class="image w-[33.33%] md:w-[33.33%] lg:w-[33.33%] xl:w-[16.66%] overflow-hidden">
+                <img src="img/furniture_insta6.jpg" class="w-[100%] hover:scale-[1.1] duration-500 hover:brightness-50"
+                    alt="">
+            </div>
+        </div>
+        <div
+            class="insta-blog w-[400px] bg-white absolute top-[40%] md:top-[42%] lg:top-[42%] xl:top-[37%] left-[0%] right-[0%] mx-auto translate-x-50 py-5 px-5 rounded-[67px] z-50">
+            <i class="fa-brands fa-instagram absolute text-[85px] opacity-30 right-[42%] top-[13%] -z-50"
+                style="color: #9097a2;"></i>
+            <h2 class="text-center text-gray text-[28px] font-[600] hover:text-second duration-500">instagram</h2>
+            <span class="text-center block text-pera font-[400] hover:text-second duration-500">@shoppingzone</span>
+        </div>
+    </section>
+    <!-- shoppingzone section end -->
+
+    <!-- owl stage section start  -->
+    <section class="owl-stage py-10">
+        <div class="container mx-auto">
+            <div class="main flex flex-wrap justify-center">
+                <div class="box w-[50%] md:w-[33.33%] lg:w-[20%] px-1 py-2">
+                    <div class="image">
+                        <a href="#">
+                            <img src="img/cl_logo6.png"
+                                class="brightness-50 hover:brightness-0 duration-500 hover:scale-[1.1] mx-auto" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="box w-[50%] md:w-[33.33%] lg:w-[20%] px-1 py-2">
+                    <div class="image">
+                        <a href="#">
+                            <img src="img/cl_logo2.png"
+                                class="brightness-50 hover:brightness-0 duration-500 hover:scale-[1.1] mx-auto" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="box w-[50%] md:w-[33.33%] lg:w-[20%] px-1 py-2">
+                    <div class="image">
+                        <a href="#">
+                            <img src="img/cl_logo3.png"
+                                class="brightness-50 hover:brightness-0 duration-500 hover:scale-[1.1] mx-auto" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="box w-[50%] md:w-[33.33%] lg:w-[20%] px-1 py-2">
+                    <div class="image">
+                        <a href="#">
+                            <img src="img/cl_logo4.png"
+                                class="brightness-50 hover:brightness-0 duration-500 hover:scale-[1.1] mx-auto" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="box w-[50%] md:w-[33.33%] lg:w-[20%] px-1 py-2">
+                    <div class="image">
+                        <a href="#">
+                            <img src="img/cl_logo5.png"
+                                class="brightness-50 hover:brightness-0 duration-500 hover:scale-[1.1] mx-auto" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- owl stage section end -->
+
+    <!-- footer start  -->
+    <footer class="bg-[#202325] py-[100px] px-5 lg:px-0">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap lg:px-10">
+                <div class="w-[100%] lg:w-[33.33%] py-2 lg:py-4 text-white">
+                    <h6 class="text-xl pb-3 font-semibold">Contact Info</h6>
+                    <ul>
+                        <li class="py-2">
+                            <i class="fa-solid fa-location-dot me-2"></i> <span> 123 Street, Old Trafford, NewYork,
+                                USA</span>
+                        </li>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-[#dc3545] duration-500"><i
+                                    class="fa-regular fa-envelope me-2"></i> info@sitename.com</a>
+                        </li>
+                        <li class="py-2">
+                            <i class="fa-solid fa-mobile-screen-button me-2"></i> + 457 789 789 65
+                        </li>
+                    </ul>
+                    <div class="flex pt-3">
+                        <img src="img/facebook.png" class="pe-1">
+                        <img src="img/twitter.png" class="px-1">
+                        <img src="img/google.png" alt="" class="px-1">
+                        <img src="img/youtube.png" alt="" class="px-1">
+                        <img src="img/instagram (1).png" alt="" class="px-1">
+                    </div>
+                </div>
+
+                <div class="w-[100%] md:w-[50%] lg:w-[16.66%] py-4 lg:py-4 text-white">
+                    <h6 class="text-xl pb-3 font-semibold">Useful Links</h6>
+                    <ul>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-[#dc3545] duration-200">About Us</a>
+                        </li>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-[#dc3545] duration-200">FAQ</a>
+                        </li>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-[#dc3545] duration-200">Location</a>
+                        </li>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-[#dc3545] duration-200">Affiliates</a>
+                        </li>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-[#dc3545] duration-200">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-[100%] md:w-[50%] lg:w-[16.66%] py-4 lg:py-4 text-white">
+                    <h6 class="text-xl pb-3 font-semibold">My Account</h6>
+                    <ul>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-[#dc3545] duration-200">My Account</a>
+                        </li>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-[#dc3545] duration-200">Discount</a>
+                        </li>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-[#dc3545] duration-200">Returns</a>
+                        </li>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-[#dc3545] duration-200">Orders History</a>
+                        </li>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-[#dc3545] duration-200">Order Tracking</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-[100%] lg:w-[33.33%] py-2 lg:py-4 text-white">
+                    <h6 class="text-xl pb-3 font-semibold">Subscribe Our Newsletter</h6>
+
+                    <p class="mt-[20px] mb-[40px]">If you want to get an email from us every time we have a new
+                        special
+                        offer, then sign up here!</p>
+
+                    <form class="flex items-center relative">
+                        <input type="Email" placeholder="Enter Email Address"
+                            class="w-[100%] rounded-[30px] py-[10px] px-[20px] text-lg text-slate-700">
+                        <button><i
+                                class="fa-solid fa-envelope-open-text absolute right-[6px] top-[4px] z-10 text-white leading-[40px] text-lg w-[40px] h-[40px] bg-[#FF324D] rounded-full"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+</div>
+
+    <!-- loader start  -->
+    <div class="loader">
+        <div class="wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+        </div>
+    </div>
+    <!-- loader end -->
+
+    <!-- cursor start -->
+		<div class="cursor"></div>
+		<div class="cursor2"></div>
+		<!-- cursor end -->
+
+    <!-- tailwind.config.js link start  -->
+    <script src="tailwind.config.js"></script>
+    <!-- tailwind.config.js link end -->
+
+    <script src="tailwind.config.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    <!-- loader link start  -->
+    <script>
+        $(".toggle").click(function () {
+            $(".menu").fadeToggle(1000);
+        });
+
+        $(window).on('load', function () {
+            $(".loader").fadeOut(4000);
+            $(".main-page").fadeIn(4000);
+        });
+    </script>
+    <!-- loader link end -->
+
+    <!-- corsor link start -->
+		<script>
+			// UPDATE: I was able to get this working again... Enjoy!
+
+			var cursor = document.querySelector('.cursor');
+			var cursorinner = document.querySelector('.cursor2');
+			var a = document.querySelectorAll('a');
+
+			document.addEventListener('mousemove', function(e){
+			var x = e.clientX;
+			var y = e.clientY;
+			cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+			});
+
+			document.addEventListener('mousemove', function(e){
+			var x = e.clientX;
+			var y = e.clientY;
+			cursorinner.style.left = x + 'px';
+			cursorinner.style.top = y + 'px';
+			});
+
+			document.addEventListener('mousedown', function(){
+			cursor.classList.add('click');
+			cursorinner.classList.add('cursorinnerhover')
+			});
+
+			document.addEventListener('mouseup', function(){
+			cursor.classList.remove('click')
+			cursorinner.classList.remove('cursorinnerhover')
+			});
+
+			a.forEach(item => {
+			item.addEventListener('mouseover', () => {
+				cursor.classList.add('hover');
+			});
+			item.addEventListener('mouseleave', () => {
+				cursor.classList.remove('hover');
+			});
+			})
+		</script>
+		<!-- corsor link end -->
+
+
+
+
+
+</body>
+
+</html>

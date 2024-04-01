@@ -1,0 +1,649 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0px auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.home_section {
+  background-image: url(../image/banner_bg.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+.home_section .container header {
+  padding: 20px 0px;
+}
+.home_section .container header .head {
+  padding: 20px 18px;
+}
+.home_section .container header .head .container .row .logo img {
+  width: 177px;
+}
+.home_section .container header .head .container .row .menu ul {
+  position: relative;
+}
+.home_section .container header .head .container .row .menu ul li:first-child a {
+  color: #45f882;
+}
+.home_section .container header .head .container .row .menu ul li:first-child a::after {
+  transform: rotate(-45deg);
+  visibility: visible;
+  top: 10px;
+  opacity: 1;
+}
+.home_section .container header .head .container .row .menu ul .drop-down {
+  position: absolute;
+  top: 72px;
+  background-color: rgba(0, 0, 0, 0.6784313725);
+  padding: 15px 12px;
+  min-width: 250px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.home_section .container header .head .container .row .menu ul .drop-down ul li {
+  padding: 12px 18px;
+}
+.home_section .container header .head .container .row .menu ul .drop-down ul li a {
+  color: white;
+  transition: all 0.5s;
+  position: relative;
+}
+.home_section .container header .head .container .row .menu ul .drop-down ul li a:before {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  left: -20px;
+  top: 30%;
+  width: 8px;
+  height: 5px;
+  background-color: #45f882;
+  visibility: hidden;
+  transition: 0.1s;
+  border-radius: 0px 3px 3px 0px;
+}
+.home_section .container header .head .container .row .menu ul .drop-down ul li a:after {
+  display: none;
+}
+.home_section .container header .head .container .row .menu ul .drop-down ul li a:hover {
+  color: #45f882;
+  margin-left: 8px;
+}
+.home_section .container header .head .container .row .menu ul .drop-down ul li a:hover:before {
+  visibility: visible;
+  transition: 0.3s;
+}
+.home_section .container header .head .container .row .menu ul li {
+  padding: 0px 20px;
+}
+.home_section .container header .head .container .row .menu ul li a {
+  font-size: 15px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Barlow";
+  position: relative;
+  transition: all 0.5s;
+}
+.home_section .container header .head .container .row .menu ul li a:after {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  left: 0px;
+  right: 0px;
+  width: 45px;
+  height: 1px;
+  top: 50%;
+  background-color: #45f882;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.home_section .container header .head .container .row .menu ul li .about:after {
+  left: 13px;
+}
+.home_section .container header .head .container .row .menu ul li .tournament:after {
+  left: 30px;
+}
+.home_section .container header .head .container .row .menu ul li .contact:after {
+  left: 10px;
+}
+.home_section .container header .head .container .row .menu ul li:hover .drop-down {
+  visibility: visible;
+  top: 52px;
+  opacity: 1;
+  transition: all 0.5s;
+}
+.home_section .container header .head .container .row .menu ul li:hover a {
+  color: #45f882;
+  transition: all 0.5s;
+}
+.home_section .container header .head .container .row .menu ul li:hover a:after {
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+  visibility: visible;
+  opacity: 1;
+}
+.home_section .container header .head .container .row .search-btn .icon a {
+  color: white;
+  font-size: 22px;
+  transition: all 0.5s;
+}
+.home_section .container header .head .container .row .search-btn .icon a:hover {
+  color: #45f882;
+  transition: all 0.5s;
+}
+.home_section .container header .head .container .row .search-btn .btn a {
+  position: relative;
+  width: 150px;
+  height: 45px;
+  color: #45f882;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;
+  transition: all 0.5s;
+}
+.home_section .container header .head .container .row .search-btn .btn a .svg-icon {
+  position: absolute;
+  stroke-width: 2px;
+  fill-rule: evenodd;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  fill: #0f1d29;
+  stroke: #00ff57;
+  transition: all 0.5s;
+}
+.home_section .container header .head .container .row .search-btn .btn a .sign {
+  position: absolute;
+  top: 33%;
+  left: 20%;
+}
+.home_section .container header .head .container .row .search-btn .btn a span {
+  display: inline-block;
+  z-index: 1;
+  position: absolute;
+  top: 28%;
+  left: 40%;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: "Barlow";
+}
+.home_section .container header .head .container .row .search-btn .toggle a {
+  color: white;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+.home_section .container header .head .container .row .search-btn .toggle a:hover {
+  color: #45f882;
+  transition: all 0.5s;
+}
+.home_section .container .content {
+  padding: 150px 0px;
+}
+.home_section .container .content .details h2 {
+  font-size: 150px;
+  font-family: "Luckiest Guy";
+  color: white;
+  letter-spacing: 5px;
+  font-weight: 100;
+  text-shadow: 0px 6px 0px #45f882;
+}
+.home_section .container .content .details h3 {
+  font-size: 26px;
+  text-align: center;
+  font-family: "Barlow";
+  color: white;
+  letter-spacing: 6px;
+}
+.home_section .container .content .details a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px 0px;
+}
+.home_section .container .content .details svg {
+  width: 184px;
+  height: auto;
+  fill: #00ff57;
+  stroke: #ffffff;
+}
+.home_section .container .content .details .span {
+  position: absolute;
+  top: 27%;
+  font-size: 20px;
+  color: #0f1d29;
+  font-weight: 700;
+  font-family: "Barlow";
+}
+
+.experience_section {
+  background-image: url(../image/result_bg.png);
+  background-repeat: no-repeat;
+  min-height: 500px;
+  margin-top: -140px;
+  padding: 150px 0px 25px;
+}
+.experience_section .container .row .blog-1 {
+  justify-content: center;
+  padding: 12px 0px 25px 0px;
+}
+.experience_section .container .row .blog-1 .title span {
+  font-size: 14px;
+  color: #45f882;
+  font-family: "Barlow";
+  display: block;
+  text-align: center;
+  font-weight: 600;
+}
+.experience_section .container .row .blog-1 .title h2 {
+  font-size: 45px;
+  color: white;
+  font-family: "Barlow";
+  padding: 15px 0px;
+  font-weight: 600;
+  position: relative;
+}
+.experience_section .container .row .blog-1 .title h2::after {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  background-image: url(../image/title_shape.svg);
+  background-repeat: no-repeat;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 70px;
+  height: 5px;
+}
+.experience_section .container .row .blog-2 {
+  justify-content: center;
+  padding: 12px 0px 50px 0px;
+}
+.experience_section .container .row .blog-2 .league span {
+  font-size: 24px;
+  display: block;
+  font-weight: 700;
+  font-family: "Barlow";
+  color: #45f882;
+  letter-spacing: 2px;
+}
+.experience_section .container .row .blog-3 {
+  padding: 40px 0px;
+}
+.experience_section .container .row .blog-3 .team-1 {
+  justify-content: end;
+}
+.experience_section .container .row .blog-3 .team-1 .name {
+  padding-right: 25px;
+}
+.experience_section .container .row .blog-3 .team-1 .name h2 {
+  font-size: 24px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Barlow";
+  padding-bottom: 10px;
+}
+.experience_section .container .row .blog-3 .team-1 .name h3 {
+  font-size: 18px;
+  color: #45f882;
+  text-transform: uppercase;
+  text-align: end;
+}
+.experience_section .container .row .blog-3 .team-1 .content .image {
+  width: 112px;
+  height: 112px;
+  border: 3px solid #45f882;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 2;
+}
+.experience_section .container .row .blog-3 .team-1 .content .image img {
+  width: 70px;
+}
+.experience_section .container .row .blog-3 .team-1 .content .svg {
+  position: relative;
+  left: -20px;
+  z-index: 1;
+}
+.experience_section .container .row .blog-3 .team-1 .content .svg svg {
+  width: 135px;
+  fill: #45f882;
+}
+.experience_section .container .row .blog-3 .team-1 .content .svg .span {
+  color: #20202a;
+  font-size: 30px;
+  font-family: "Barlow";
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: absolute;
+  left: 32%;
+  top: 25%;
+}
+.experience_section .container .row .blog-3 .team-2 {
+  justify-content: start;
+}
+.experience_section .container .row .blog-3 .team-2 .name {
+  padding-left: 25px;
+}
+.experience_section .container .row .blog-3 .team-2 .name h2 {
+  font-size: 24px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Barlow";
+  padding-bottom: 10px;
+}
+.experience_section .container .row .blog-3 .team-2 .name h3 {
+  font-size: 18px;
+  color: #45f882;
+  text-transform: uppercase;
+  text-align: end;
+}
+.experience_section .container .row .blog-3 .team-2 .content .image {
+  width: 112px;
+  height: 112px;
+  border: 3px solid #45f882;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 2;
+}
+.experience_section .container .row .blog-3 .team-2 .content .image img {
+  width: 70px;
+}
+.experience_section .container .row .blog-3 .team-2 .content .svg {
+  position: relative;
+  right: -20px;
+  z-index: 1;
+  transform: rotateY(191deg);
+}
+.experience_section .container .row .blog-3 .team-2 .content .svg svg {
+  width: 135px;
+  fill: #45f882;
+}
+.experience_section .container .row .blog-3 .team-2 .content .svg .span {
+  transform: rotateY(191deg);
+  color: #20202a;
+  font-size: 30px;
+  font-family: "Barlow";
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: absolute;
+  left: 32%;
+  top: 25%;
+}
+.experience_section .container .row .blog-4 .content h4 {
+  color: white;
+  font-family: "Barlow";
+  text-transform: uppercase;
+  font-size: 14px;
+  padding-bottom: 12px;
+}
+.experience_section .container .row .blog-4 .content span {
+  display: block;
+  color: #45f882;
+  font-family: "Barlow";
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  font-size: 16px;
+}
+.experience_section .container .row .blog-5 {
+  padding: 30px 0px;
+}
+.experience_section .container .row .blog-5 .svg-icon {
+  width: 186px;
+  fill: #45f882;
+  stroke: white;
+  position: relative;
+}
+.experience_section .container .row .blog-5 .svg-icon .span {
+  position: absolute;
+  top: 35%;
+  left: 27%;
+  font-family: "Barlow";
+  font-size: 16px;
+  color: #20202a;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.journey-streamers-section {
+  background-image: url(../image/area_bg02.jpg);
+  padding: 190px 0px;
+}
+.journey-streamers-section .journey-section {
+  padding: 20px 0px;
+}
+.journey-streamers-section .journey-section .content h2 {
+  font-size: 45px;
+  font-family: "Barlow";
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 45px;
+  position: relative;
+}
+.journey-streamers-section .journey-section .content h2::after {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  background-image: url(../image/title_shape.svg);
+  background-repeat: no-repeat;
+  bottom: 18px;
+  left: 0;
+  width: 70px;
+  height: 5px;
+}
+.journey-streamers-section .journey-section .content p {
+  font-size: 17px;
+  color: #adb0bc;
+  font-family: "Barlow";
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.journey-streamers-section .journey-section .content .details {
+  padding: 50px 0px;
+}
+.journey-streamers-section .journey-section .content .details .blog-1 .box-1 .menu ul li {
+  padding: 0px 10px;
+}
+.journey-streamers-section .journey-section .content .details .blog-1 .box-1 .menu ul li a {
+  color: white;
+  font-family: "Barlow";
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.journey-streamers-section .journey-section .content .details .blog-1 .box-1 .menu ul li span {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #adb0bc;
+  font-family: "Barlow";
+  text-transform: uppercase;
+  padding-top: 8px;
+}
+.journey-streamers-section .journey-section .content .details .blog-1 .box-2 {
+  padding: 40px 0px;
+}
+.journey-streamers-section .journey-section .content .details .blog-1 .box-2 .svg-icon {
+  width: 156px;
+  fill: transparent;
+  stroke: #45f882;
+  position: relative;
+}
+.journey-streamers-section .journey-section .content .details .blog-1 .box-2 .svg-icon span {
+  display: block;
+  position: absolute;
+  position: absolute;
+  top: 28%;
+  left: 22%;
+  font-family: "Barlow";
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.journey-streamers-section .journey-section .content .details .blog-1 .box-2 .icon a {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+.journey-streamers-section .journey-section .content .details .blog-1 .box-2 .icon a i {
+  color: #45f882;
+  transition: all 0.5s;
+}
+.journey-streamers-section .journey-section .content .details .blog-1 .box-2 .icon a:hover {
+  background-color: #45f882;
+  transition: all 0.5s;
+  border: white;
+}
+.journey-streamers-section .journey-section .content .details .blog-1 .box-2 .icon a:hover i {
+  color: black;
+  transition: all 0.5s;
+}
+.journey-streamers-section .journey-section .content .details .blog-1 .box-2 .icon span {
+  font-family: "Barlow";
+  font-size: 13px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 600;
+  padding-left: 20px;
+  transition: all 0.5s;
+}
+.journey-streamers-section .journey-section .content .details .blog-1 .box-2 .icon span:hover {
+  color: #45f882;
+  transition: all 0.5s;
+}
+.journey-streamers-section .journey-section .content .details .blog-2 .image {
+  width: 137px;
+  height: 137px;
+  position: relative;
+  margin: 0px auto;
+  animation: 6s spin linear infinite;
+}
+@keyframes spin {
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.journey-streamers-section .journey-section .content .details .blog-2 .image:hover {
+  animation: stop;
+}
+.journey-streamers-section .journey-section .content .details .blog-2 .image svg {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  overflow: initial;
+  left: 28px;
+  top: 26px;
+  transform: rotate(322deg);
+}
+.journey-streamers-section .journey-section .content .details .blog-2 .image svg path {
+  fill: none;
+}
+.journey-streamers-section .journey-section .content .details .blog-2 .image svg text {
+  fill: white;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.journey-streamers-section .journey-section .image-box .content {
+  justify-content: end;
+}
+.journey-streamers-section .journey-section .image-box .content .img {
+  position: relative;
+  max-width: 511px;
+}
+.journey-streamers-section .journey-section .image-box .content .img:hover::after {
+  height: calc(100% - 4px);
+  width: 100%;
+  transform: rotate(0deg);
+  bottom: 4px;
+  right: 0px;
+  transition: all 0.5s;
+}
+.journey-streamers-section .journey-section .image-box .content .img::after {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% + 15px);
+  background-color: #45f882;
+  transform: rotate(5deg);
+  right: -20px;
+  bottom: 26px;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+.journey-streamers-section .journey-section .image-box .content .img .pera-img {
+  position: relative;
+  z-index: 2;
+}
+.journey-streamers-section .journey-section .image-box .content .img .main-img {
+  position: absolute;
+  z-index: 3;
+  left: 80px;
+  top: -115px;
+}/*# sourceMappingURL=style.css.map */
